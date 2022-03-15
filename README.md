@@ -5,8 +5,17 @@ O projeto Livrar conta com uma biblioteca virtual que viabiliza o acesso e a lei
 <br><br>
 ## 🛠 &nbsp;Tecnologias Utilizadas
 
-- Linguagem: PHP ()
+- Linguagem: PHP (versão )
 
-- Banco de Dados: MariaDB ()
+- Banco de Dados: MariaDB (versão )
 
-- Servidor: Apache ()
+- Servidor: Apache (versão )
+
+<br><br>
+## 👨‍ &nbsp;Autores
+
+* Érick de Castro Silva
+
+* Gabriel Nathan Almeida Silva
+
+* Vitor Melo Assunção
