@@ -1,0 +1,89 @@
+REQUISITOS DE USUARIO:
+
+Desejável
+{
+    Lista com livros já lidos
+    Lista com futuras leituras
+    Um fórum pra cada livro
+    O usuário pode requerer livros novos
+
+    Importante
+    {
+        Dar nota aos livros
+        Ter pelo menos um fórum geral para comentários sobre os livros
+        Ter um usuário bibliotecário
+        Ter um usuário moderador, para controlar o fórum
+        Ter um usuário administrador
+        Cada usuário ter seu perfil
+
+        Essencial
+        {
+            O usuario podera ler livros
+            O usuário devera ser registrado
+        }
+    }
+}
+
+
+REQUISITOS FUNCIONAIS:
+
+Desejável
+{
+    Lista com livros já lidos
+    {
+        Dentro do perfil do usuario, deve haver uma opcao para listar os livros que o usuario ja leu no site.
+    }
+    Lista com futuras leituras
+    {
+        Dentro do perfil do usuario, deve haver uma opcao para listar os livros que o usuario pretende ler.
+    }
+    Um fórum pra cada livro
+    {
+        Ao abrir um livro, logo abaixo deve haver um fórum especifico para aquele livro.
+    }
+    O usuário pode requerer livros novos
+    {
+        Dentro do perfil do usuario, deve haver uma opcao que abrira uma caixa de dialogo onde o usuario devera digitar o nome do livro o qual ele deseja que seja adicionado ao site.
+    }
+    Adicionar comentario a nota que o usuario der ao livro{sera?}
+
+    Importante
+    {
+        Dar nota aos livros
+        {
+            Ao abrir um livro, logo abaixo, antes do forum, deve haver uma opcao para que o usuario de uma nota ao livro. Essa nota se dara no formato de estrelas, que variam de 1 a 5 estrelas.
+        }
+        Ter pelo menos um fórum geral para comentários sobre os livros
+        {
+            Dentro da pagina principal, devera haver uma opcao que redirecione os usuarios para um forum geral. Esse forum sera uma sessao de comentarios.
+        }
+        Ter um usuário bibliotecário
+        {
+            Dentro do sistema devera haver um usuario com permissoes para realizar crud nos livros e gerar um relatorio com as seguintes informacoes: quantidade de livros, quantidade de livros excluidos, quantidade de livros alterados.
+        }
+        Ter um usuário moderador, para controlar o fórum
+        {
+            Dentro do sistema devera haver um usuario com permissoes para excluir comentarios, excluir leitores, banir leitores e gerar um relatorio com as seguintes informacoes: quantidade de comentarios excluidos, quantidade de leitores excluidos e quantidade de leitores atualmente banidos.
+        }
+        Ter um usuário administrador
+        {
+            Dentro do sistema devera haver um usuario com permissoes para realizar crud em bibliotecários, crud em moderadores, consultar usuarios, analisar solitacoes de livros requeridos por usuarios e gerar um relatorio com as seguintes informacoes: Quantidade de bibliotecários, quantidade de bibliotecários excluidos, quantidade de moderadores, quantidade de moderadores excluidos, quantidade de usuarios, quantidade de livros aprovados.
+        }
+        Cada usuário ter seu perfil
+        {
+            Dentro da pagina principal, devera haver uma opcao que redicecione o usuario para seu perfil pessoal. Dentro desse perfil devera aparecer as seguintes informacoes: Nome do usuario, email do usuario, uma opcao para listar os livros ja lidos, uma opcao para listar as futuras leituras.
+        }
+
+        Essencial
+        {
+            O usuario podera ler livros
+            {
+                Ao clicar em um livro, o usuario devera ser redirecionado para uma pagina onde o livro sera aberto.
+            }
+            O usuário devera ser registrado
+            {
+                Ao entrar no site o usuário devera se logar na sua conta ou fazer a criacao de uma, caso nao tenha.
+            }
+        }
+    }
+}
