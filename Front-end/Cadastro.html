@@ -1,45 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/estilo.css">
-    <link rel="stylesheet" href="Back-end/back.php">
-    <title>DevJobs</title>
+    <title>Cadastro</title>
 </head>
-
-<body >
-    <form autocomplete="off" id="Login" >
-        <div>
-            <h1>DevJobs</h1>             
-            <br>
-            <img src="img/Logo.png" alt="" width=200 height=100>
-            <h2>Login</h2>
-            <br>
-        </div>
-        <div>
-            <!--Implementacao do campo do Email-->
-            <label>Email</label>
-            <br>
-            <input type="email" name="Email" id="Email">
-            <br>
-        </div>
-        <div>
-            <!--Implementacao do campo Senha-->
-            <br>
-            <label>Senha</label>
-            <br>
-            <input type="password" name="Senha" id="Senha">
-        </div>
-        <div>
-            <!--Botao de Entrar-->
-            <br>
-            <button type="submit" id="Entrar">Entrar</button>
-        </div>
-    </form>
-    
+<body>
     <form autocomplete="on" id="Cadastro">
         <div>
             <h1>DevJobs</h1>
@@ -49,21 +17,21 @@
             <br>
         </div>
         <div>
-            <label>Nome Completo</label>
+            <label>Nome Completo*</label>
             <br>
             <input type="text" name="Nome" id="Nome">
             <br>
         </div>
         <div>
             <br>
-            <label>Email</label>
+            <label>Email*</label>
             <br>
             <input type="email" name="Email" id="Email-Cadas">
             <br>
         </div>
         <div>
             <br>
-            <label>Data de Nascimento</label>
+            <label>Data de Nascimento*</label>
             <br>
             <input type="date" id="Data-Nas">
             <br>
@@ -77,28 +45,27 @@
         </div>
         <div>
             <br>
-            <label>Senha</label>
+            <label>Senha*</label>
             <br>
             <input type="password" name="Senha" id="Senha-Cadas">
             <br>
         </div>
         <div>
             <br>
-            <label>Confirme sua Senha</label>
+            <label>Confirme sua Senha*</label>
             <br>
             <input type="password" name="Senha" id="Senha-conf">
             <br>
         </div>
         <div>
             <br>
+            <a href="paginaInicial.html">
              <!--Botao de Enviar dados-->
-            <button type="submit" id="Enviar">Enviar</button>
+            <button type="button" id="Enviar">Enviar</button>
+            </a>
             <!--Botao de Resetar dados-->
-            <button type="reset" id="Resetar">Resetar</button>
+            <button type="button" id="Resetar">Resetar</button>
         </div>
     </form>
-       
 </body>
-
-
 </html>

@@ -9,42 +9,7 @@
     background: white;
     font-family: 'Ubuntu', sans-serif;
     border-radius: 10px 10px dashed black;
-    position: absolute;
-    right: 1100px;
-    top: 100px;
-}
-
-#Cadastro{
-    background: white;
-    font-family: 'Ubuntu', sans-serif;
-    border-radius: 10px 10px dashed black;
-    position: absolute;
-    right: 700px;
-    top: 100px;
-}
-
-#Entrar{
-    color: white;
-    background-color: limegreen;
-    width: 80px;
-    height: 30px;
-    border-radius: 10px 10px;
-}
-
-#Enviar{
-    color: white;
-    background-color: limegreen;
-    width: 80px;
-    height: 30px;
-    border-radius: 10px 10px;
-}
-
-#Resetar{
-    color: white;
-    background-color: limegreen;
-    width: 80px;
-    height: 30px;
-    border-radius: 10px 10px;
+    text-align: center;
 }
 
 #Email{
@@ -62,6 +27,29 @@
     width: 200px;
     height: 20px;
     border-radius: 5px 5px;
+}
+
+#Entrar{
+    color: white;
+    background-color: limegreen;
+    width: 110px;
+    height: 30px;
+    border-radius: 10px 10px;
+}
+
+#Registrar{
+    color: white;
+    background-color: limegreen;
+    width: 80px;
+    height: 30px;
+    border-radius: 10px 10px;
+}
+
+#Cadastro{
+    background: white;
+    font-family: 'Ubuntu', sans-serif;
+    border-radius: 10px 10px dashed black;
+    text-align: center;
 }
 
 #Nome{
@@ -116,4 +104,20 @@
     width: 200px;
     height: 20px;
     border-radius: 5px 5px;
+}
+
+#Enviar{
+    color: white;
+    background-color: limegreen;
+    width: 110px;
+    height: 30px;
+    border-radius: 10px 10px;
+}
+
+#Resetar{
+    color: white;
+    background-color: limegreen;
+    width: 80px;
+    height: 30px;
+    border-radius: 10px 10px;
 }
