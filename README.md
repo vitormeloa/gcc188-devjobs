@@ -1,7 +1,7 @@
 <h1 align = "left">DevJobs</h1>
 
 <p>
-Produto com objetivo de fazer a divulgação de jobs, assim como a aplicação para os mesmos.
+Produto com objetivo de fazer a divulgação de vagas de emprego para desenvolvedores, assim como a aplicação para os mesmos.
 </p>
 
 <br><br>
