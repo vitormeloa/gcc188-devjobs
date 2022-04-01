@@ -1,9 +1,27 @@
-body{
-    background: white;
-    font-family: 'Ubuntu', sans-serif;
+*{
+    margin: 0;
+    padding: 0;
+    vertical-align: 0ex;
+    
 }
 
+#Login{
+    background: white;
+    font-family: 'Ubuntu', sans-serif;
+    border-radius: 10px 10px dashed black;
+    position: absolute;
+    right: 1100px;
+    top: 100px;
+}
 
+#Cadastro{
+    background: white;
+    font-family: 'Ubuntu', sans-serif;
+    border-radius: 10px 10px dashed black;
+    position: absolute;
+    right: 700px;
+    top: 100px;
+}
 
 #Entrar{
     color: white;
@@ -30,9 +48,72 @@ body{
 }
 
 #Email{
+    font-size: 17px;
     color: black;
+    width: 200px;
+    height: 20px;
+    border-radius: 5px 5px;
 }
 
 #Senha{
+    font-size: 17px;
     color: black;
+    background-color: white;
+    width: 200px;
+    height: 20px;
+    border-radius: 5px 5px;
+}
+
+#Nome{
+    font-size: 17px;
+    color: black;
+    background-color: white;
+    width: 200px;
+    height: 20px;
+    border-radius: 5px 5px;
+}
+
+#Email-Cadas{
+    font-size: 17px;
+    color: black;
+    background-color: white;
+    width: 200px;
+    height: 20px;
+    border-radius: 5px 5px;
+}
+
+#Data-Nas{
+    font-size: 17px;
+    color: black;
+    background-color: white;
+    width: 150px;
+    height: 20px;
+    border-radius: 5px 5px;
+}
+
+#Telefone{
+    font-size: 17px;
+    color: black;
+    background-color: white;
+    width: 200px;
+    height: 20px;
+    border-radius: 5px 5px;
+}
+
+#Senha-Cadas{
+    font-size: 17px;
+    color: black;
+    background-color: white;
+    width: 200px;
+    height: 20px;
+    border-radius: 5px 5px;
+}
+
+#Senha-conf{
+    font-size: 17px;
+    color: black;
+    background-color: white;
+    width: 200px;
+    height: 20px;
+    border-radius: 5px 5px;
 }

@@ -10,16 +10,15 @@
     <title>DevJobs</title>
 </head>
 
-<body>
-    <div>
-        <h1>DevJobs</h1>             
-        <br>
-        <img src="img/Logo.png" alt="" width=200 height=100>
-        <h2>Login</h2>
-        <br>
-    </div>
-    
-    <form autocomplete="off">
+<body >
+    <form autocomplete="off" id="Login" >
+        <div>
+            <h1>DevJobs</h1>             
+            <br>
+            <img src="img/Logo.png" alt="" width=200 height=100>
+            <h2>Login</h2>
+            <br>
+        </div>
         <div>
             <!--Implementacao do campo do Email-->
             <label>Email</label>
@@ -40,16 +39,15 @@
             <button type="submit" id="Entrar">Entrar</button>
         </div>
     </form>
-</body>
-<body>
-    <div>
-        <h1>DevJobs</h1>
-        <br>
-        <img src="img/Cadastro.png" alt="" width=200 height=100>
-        <h2>Cadastro</h2>
-        <br>
-    </div>
-    <form autocomplete="on">
+    
+    <form autocomplete="on" id="Cadastro">
+        <div>
+            <h1>DevJobs</h1>
+            <br>
+            <img src="img/Cadastro.png" alt="" width=200 height=100>
+            <h2>Cadastro</h2>
+            <br>
+        </div>
         <div>
             <label>Nome Completo</label>
             <br>
@@ -67,7 +65,7 @@
             <br>
             <label>Data de Nascimento</label>
             <br>
-            <input type="date">
+            <input type="date" id="Data-Nas">
             <br>
         </div>
         <div>
@@ -78,6 +76,21 @@
             <br>
         </div>
         <div>
+            <br>
+            <label>Senha</label>
+            <br>
+            <input type="password" name="Senha" id="Senha-Cadas">
+            <br>
+        </div>
+        <div>
+            <br>
+            <label>Confirme sua Senha</label>
+            <br>
+            <input type="password" name="Senha" id="Senha-conf">
+            <br>
+        </div>
+        <div>
+            <br>
              <!--Botao de Enviar dados-->
             <button type="submit" id="Enviar">Enviar</button>
             <!--Botao de Resetar dados-->
