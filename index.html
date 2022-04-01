@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/esilo.css">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="Back-end/back.php">
     <title>DevJobs</title>
 </head>
 
@@ -21,8 +22,8 @@
     <form autocomplete="off">
         <div>
             <!--Implementacao do campo do Email-->
-            <br>
             <label>Email</label>
+            <br>
             <input type="email" name="Email" id="Email">
             <br>
         </div>
@@ -30,8 +31,57 @@
             <!--Implementacao do campo Senha-->
             <br>
             <label>Senha</label>
-            <input type="password" name="Senha" id="Senha">
             <br>
+            <input type="password" name="Senha" id="Senha">
+        </div>
+        <div>
+            <!--Botao de Entrar-->
+            <br>
+            <button type="submit" id="Entrar">Entrar</button>
+        </div>
+    </form>
+</body>
+<body>
+    <div>
+        <h1>DevJobs</h1>
+        <br>
+        <img src="img/Cadastro.png" alt="" width=200 height=100>
+        <h2>Cadastro</h2>
+        <br>
+    </div>
+    <form autocomplete="on">
+        <div>
+            <label>Nome Completo</label>
+            <br>
+            <input type="text" name="Nome" id="Nome">
+            <br>
+        </div>
+        <div>
+            <br>
+            <label>Email</label>
+            <br>
+            <input type="email" name="Email" id="Email-Cadas">
+            <br>
+        </div>
+        <div>
+            <br>
+            <label>Data de Nascimento</label>
+            <br>
+            <input type="date">
+            <br>
+        </div>
+        <div>
+            <br>
+            <label>Telefone</label>
+            <br>
+            <input type="phone" name="Telefone" id="Telefone">
+            <br>
+        </div>
+        <div>
+             <!--Botao de Enviar dados-->
+            <button type="submit" id="Enviar">Enviar</button>
+            <!--Botao de Resetar dados-->
+            <button type="reset" id="Resetar">Resetar</button>
         </div>
     </form>
        

@@ -1,0 +1,38 @@
+body{
+    background: white;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+
+
+#Entrar{
+    color: white;
+    background-color: limegreen;
+    width: 80px;
+    height: 30px;
+    border-radius: 10px 10px;
+}
+
+#Enviar{
+    color: white;
+    background-color: limegreen;
+    width: 80px;
+    height: 30px;
+    border-radius: 10px 10px;
+}
+
+#Resetar{
+    color: white;
+    background-color: limegreen;
+    width: 80px;
+    height: 30px;
+    border-radius: 10px 10px;
+}
+
+#Email{
+    color: black;
+}
+
+#Senha{
+    color: black;
+}
