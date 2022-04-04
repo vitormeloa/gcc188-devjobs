@@ -223,37 +223,3 @@ body {
     margin-top: 20px;
     letter-spacing: 4px
 }
-
-/*=================== HOME ===================*/
-#home {
-    overflow: hidden;
-    }
-
-#home .container {
-    margin: 0;
-}
-
-#home .image {
-    margin-left: 350px;
-    margin-top: 100px;
-    width: 50%;
-    height: 50%;
-}
-
-.divider-1 {
-    height: 1px;
-    background: linear-gradient(
-        270deg,
-        hsl(var(--hue), 36%, 57%, 1),
-        hsl(var(--hue), 65%, 88%, 0.34)
-    );
-}
-
-.divider-2 {
-    height: 1px;
-    background: linear-gradient(
-        270deg,
-        hsl(var(--hue), 65%, 88%, 0.34),
-        hsl(var(--hue), 36%, 57%, 1)
-    );
-}
