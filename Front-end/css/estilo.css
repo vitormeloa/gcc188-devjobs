@@ -1,153 +1,225 @@
-*{
+/*=================== RESET ===================*/
+* {
     margin: 0;
     padding: 0;
-    vertical-align: 0ex;
-    
+    box-sizing: border-box;
 }
 
-#Login{
-    background: white;
-    font-family: 'Ubuntu', sans-serif;
-    border-radius: 10px 10px dashed black;
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+p {
+    color: var(--text-color-light);
+}
+
+/*=================== VARIABLES ===================*/
+:root {
+    --header-height: 4.5rem;
+    /* colors */
+    --hue: 130;
+    /* HSL color mode */
+    --base-color: hsl(var(--hue) 36% 57%);
+    --base-color-second: hsl(var(--hue) 65% 88%);
+    --base-color-alt: hsl(var(--hue) 57% 53%);
+    --title-color: hsl(var(--hue) 41% 10%);
+    --text-color: rgb(0, 0, 0);
+    --text-color-light: hsl(0 0% 98%);
+    --body-color: hsl(0 0% 98%);
+}
+
+/*=================== BASE ===================*/
+
+html {
+    scroll-behavior: smooth;
+    height: 100%;
+}
+
+body {
+    font: 400 1rem 'DM Sans', sans-serif;
+    color: var(--text-color);
+    background-color: var(--body-color);
+    -webkit-font-smoothing: antialiased;
+    margin: 0;
+    padding: 0;
+}
+
+.title {
+    font: 700 1.875rem 'Poppins', sans-serif;
+    color: var(--title-color);
+    -webkit-font-smoothing: auto;
+}
+
+.button {
+    background-color: var(--title-color);
+    color: var(--text-color-light);
+    border: 0;
+    cursor: pointer;
+    border-radius: 20px;
+    color: white;
+    display: grid;
+    align-items: center;
+    justify-content: center;    
+    height: 2.5rem;
+    padding: 0 2rem;
+    font: 400 1rem 'DM Sans', sans-serif;
+    transition: background 0.3s;
+}
+
+.button:hover {
+    background: var(--text-color);
+}
+
+/*=================== LAYOUT ===================*/
+
+.container {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
+
+.grid {
+    display: grid;
+    gap: 0;
+}
+
+.section {
+    padding-bottom: 5rem 0;
+}
+
+.section.title {
+    margin-bottom: 1rem;
+}
+
+.section header {
+    margin-bottom: 4rem;
+}
+
+.section header strong {
+    color: var(--base-color);
+}
+
+#header {
+    border-bottom: 1px solid #e4e4e4;
+    margin-bottom: 2rem;
+    display: flex;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background-color: var(--body-color);
+}
+
+#header.scroll {
+    background: var(--base-color);
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.15);
+}
+
+#header.scroll .logo span {
+    color: white;
+    transition: 1s;
+}
+
+#header.scroll .icon-menu {
+    color: white;
+    transition: 1s;
+}
+
+/*=================== LOGO ===================*/
+
+.logo {
+    font: 700 1.3125rem 'Poppins', sans-serif;
+    color: var(--title-color);
+}
+
+.logo span {
+    color: var(--base-color);
+}  
+
+/*=================== LOGIN ==================*/
+
+
+
+.info img{
+    margin-top: 20%;
+    margin-left: 25px;
+    width: 200px;
+    height: 200px;
+}
+
+
+.login-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    padding: 40px;
+    transform: translate(-50%, -50%);
+    background:var(--base-color);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    border-radius: 10px;
+}
+
+.login-box h2 {
+    margin: 0 0 30px;
+    padding: 0;
+    color: #fff;
     text-align: center;
 }
 
-#Email{
-    font-size: 15px;
-    color: black;
-    width: 200px;
-    height: 20px;
-    border-radius: 5px 5px;
+.login-box .user-box {
+    position: relative;
 }
 
-#Senha{
-    font-size: 17px;
-    color: black;
-    background-color: white;
-    width: 200px;
-    height: 20px;
-    border-radius: 5px 5px;
+.login-box .user-box input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
 }
 
-#Entrar{
-    color: white;
-    background-color: limegreen;
-    width: 150px;
-    height: 30px;
-    border-radius: 10px 10px;
+.login-box .user-box label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
 }
 
-#Cadastrar-se{
-    color: white;
-    background-color: limegreen;
-    width: 150px;
-    height: 50px;
-    border-radius: 10px 10px;
+.login-box .user-box input:focus ~ label,
+.login-box .user-box input:valid ~ label {
+    top: -20px;
+    left: 0;
+    color: var(--base-color);
+    font-size: 12px;
 }
 
-#Cadastro{
-    background: white;
-    font-family: 'Ubuntu', sans-serif;
-    border-radius: 10px 10px dashed black;
-    text-align: center;
-}
-
-#Nome{
-    font-size: 17px;
-    color: black;
-    background-color: white;
-    width: 200px;
-    height: 20px;
-    border-radius: 5px 5px;
-}
-
-#Email-Cadas{
-    font-size: 17px;
-    color: black;
-    background-color: white;
-    width: 200px;
-    height: 20px;
-    border-radius: 5px 5px;
-}
-
-#Data-Nas{
-    font-size: 17px;
-    color: black;
-    background-color: white;
-    width: 150px;
-    height: 20px;
-    border-radius: 5px 5px;
-}
-
-#Telefone{
-    font-size: 17px;
-    color: black;
-    background-color: white;
-    width: 200px;
-    height: 20px;
-    border-radius: 5px 5px;
-}
-
-#Senha-Cadas{
-    font-size: 17px;
-    color: black;
-    background-color: white;
-    width: 200px;
-    height: 20px;
-    border-radius: 5px 5px;
-}
-
-#Senha-conf{
-    font-size: 17px;
-    color: black;
-    background-color: white;
-    width: 200px;
-    height: 20px;
-    border-radius: 5px 5px;
-}
-
-#Enviar{
-    color: white;
-    background-color: limegreen;
-    width: 110px;
-    height: 30px;
-    border-radius: 10px 10px;
-}
-
-#Resetar{
-    color: white;
-    background-color: limegreen;
-    width: 80px;
-    height: 30px;
-    border-radius: 10px 10px;
-}
-
-.Funcionario
-{
-    color: white;
-    background-color: black;
-    width: 200px;
-    height: 100px;
-    font-size: larger;
-    text-align: center;
-    margin-left: 43%;
-}
-
-#h1
-{
-    color: white;
-    background-color: black;
-    width: 210px;
-    height: 60px;
-    margin-left: 43%;
-}
-
-#Cpf
-{
-    font-size: 17px;
-    color: black;
-    background-color: white;
-    width: 200px;
-    height: 20px;
-    border-radius: 5px 5px;
+.login-box form a {
+    position: inline-block;
+    color: var(--base-color);
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    margin-top: 20px;
+    letter-spacing: 4px
 }

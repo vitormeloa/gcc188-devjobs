@@ -1,57 +1,61 @@
 <!DOCTYPE html>
-
-<html lang="en">
-
+<html lang="pt_BR">
     <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="Front-end/css/estilo.css">
-        <link rel="stylesheet" href="Back-end/back.php">
+        <!-- PAGE INFO -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>DevJobs</title>
+        <!-- STYLES -->
+        <link rel="stylesheet" href="Front-end/css/estilo.css" />
+        <!-- FONTS -->
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap"
+        rel="stylesheet" />
     </head>
-
-    <body >
-        <form autocomplete="off" id="Login">
-            <div>
-                <h1>DevJobs</h1>             
-                <br>
-                <img src="Front-end/images/Logo.png" alt="" width=200 height=100>
-                <h2>Login</h2>
-                <br>
-            </div>
-
-            <div>
-                <!--Implementacao do campo do Email-->
-                <label for="Email">Email</label>
-                <br>
-                <input type="email" name="Email" id="Email">
-                <br>
-            </div>
-
-            <div>
-                <!--Implementacao do campo Senha-->
-                <br>
-                <label for="Senha">Senha</label>
-                <br>
-                <input type="password" name="Senha" id="Senha">
-            </div>
-
-            <div>
-                <!--Botao de Entrar, esse href aqui tem que ver-->
-                <br>
-                <a href="">
-                    <button type="button" id="Entrar">ENTRAR</button>
-                </a>
-                <br><br>
-                <!--Botao de Registro-->
-                <a href="funcionarioOrContratante.html">
-                    <button type="button" id="Cadastrar-se">CADASTRAR-SE</button>
-                </a>
-            </div>
-
-        </form>
+    <body>
+        <header id="header">
+            <nav class="container">
+                <a class="logo" href="#">Dev<span>Jobs</span></a>
+            </nav>
+        </header>
         
+        <main>
+            <div class="login-box">
+                <section class="section">
+                    <div class="container grid">
+                        <form autocomplete="off" id="Login">
+                            <div class = "info">
+                                <img src="Front-end/images/Logo.png" alt="Pessoa segurando cadeado">
+                                <h2>Login</h2>
+                                <br>
+                            </div>
+                            <!--Implementacao do campo do Email-->
+                            <div class="user-box">
+                                <label for="Email">Email</label>
+                                <br>    
+                                <input type="email" name="Email" id="Email">
+                                <br>
+                            </div>
+                            
+                            <!--Implementacao do campo Senha-->
+                            <div class="user-box">
+                                <br>
+                                <label for="Senha">Senha</label>
+                                <input type="password" name="Senha" id="Senha">
+                            </div>
+                            <div class="buttons">
+                                <br>
+                                <a href="Front-end/views/paginaInicialAdministrador.html" target="_blank" class="button" type="button">Logar</a>
+                                <!--Botao de Registro-->
+                                <p>Não tem uma conta?</p>
+                                <a href="Front-end/views/funcionarioOrContratante.html" target="_blank" class="button" type="button">Cadastrar</a>
+                            </div>
+                        </form>
+                    </div>
+                </section>
+            </div>
+                <img src="Front-end/images/image-background-green.jpeg" class="background">
+        </main>
     </body>
-
 </html>
