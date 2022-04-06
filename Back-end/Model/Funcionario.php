@@ -1,20 +1,20 @@
 <?php
  
- class Funcionario extends Usuario
- {
-    private $listaCurriculos;
+class Funcionario extends Usuario
+{
+  private $listaCurriculos;
 
-    function__construct($cpf, $nome, $email, $senha, $dataNasc, $telefone, $listaCurriculos)
-    {
-        parent::__construct($cpf, $nome, $email, $senha, $dataNasc, $telefone);
-        $this->listaCurriculos = $listaCurriculos;
-    }
+  function __construct($umCpf, $umNome, $umEmail, $umaSenha, $umaDataNasc, $umTelefone, $umaListaCurriculos)
+  {
+    parent::__construct($umCpf, $umNome, $umEmail, $umaSenha, $umaDataNasc, $umTelefone);
+    $this->listaCurriculos = $umaListaCurriculos;
+  }
     
-    public function getListaCurriculos()
-    {
+  public function getListaCurriculos()
+  {
 		return $this->listaCurriculos;
-	}
- }
+  }
+}
  
  
- ?>
+?>

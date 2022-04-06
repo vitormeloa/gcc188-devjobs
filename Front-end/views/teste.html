@@ -1,1 +1,57 @@
- 
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8" lang = "pt-br">
+    </head>
+    <body>
+        <h1>TESTE<h1>
+        <form action = "../../Back-end/Controller/cadastrarFuncionario.php" method = "POST">
+            <label for = "cpf">*CPF:</label>
+            <br>
+            <input type = "text" name = "cpf" pattern = "\d{3}\.?\d{3}\.?\d{3}-?\d{2}">
+            <br>
+
+            <label for = "nome">*Nome Completo:</label>
+            <br>
+            <input type = "text" name = "nome">
+            <br>
+
+            <br>
+            <label for = "email">*Email:</label>
+            <br>
+            <input type = "email" name = "email">
+            <br>
+
+            <br>
+            <label for = "senha">*Senha:</label>
+            <br>
+            <input type = "password" name = "senha">
+            <br>
+
+            <br>
+            <label for = "senhaConfirmacao">*Confirme sua Senha:</label>
+            <br>
+            <input type = "password" name = "senhaConfirmacao">
+            <br>
+        
+            <br>
+            <label for = "telefone">Telefone</label>
+            <br>
+            <input type = "phone" name = "telefone">
+            <br>
+
+            <br>
+            <label for = "dataNasc">*Data de Nascimento:</label>
+            <br>
+            <input type = "date" name = "dataNasc">
+            <br>
+
+            <br>
+            <!--Esse href nao vai pra pagina inicial nao, tem que encerrar a conexao do cara e exigir login-->
+            <input type = "submit"value = "Cadastrar">
+
+        </form>
+    </body>
+
+</html>

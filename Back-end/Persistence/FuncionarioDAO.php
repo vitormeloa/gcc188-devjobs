@@ -2,7 +2,7 @@
 
 class FuncionarioDAO
 {
-    function__construct(){};
+    function __construct(){}
 
     function cadastrarFuncionario($funcionario, $connection)
     {

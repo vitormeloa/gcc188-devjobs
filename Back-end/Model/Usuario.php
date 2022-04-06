@@ -1,6 +1,6 @@
 <?php
 
-abstract class Usuario
+class Usuario
 {
     private $cpf;
     private $nome;
@@ -9,14 +9,14 @@ abstract class Usuario
     private $dataNasc;
     private $telefone;
     
-    function__construct($cpf, $nome, $email, $senha, $dataNasc, $telefone)
+    function __construct($umCpf, $umNome, $umEmail, $umaSenha, $umaDataNasc, $umTelefone)
     {
-        $this->cpf = $cpf;
-        $this->nome = $nome;
-        $this->email = $email;
-        $this->senha = $senha;
-        $this->dataNasc = $dataNasc;
-        $this->telefone = $telefone;
+        $this->cpf = $umCpf;
+        $this->nome = $umNome;
+        $this->email = $umEmail;
+        $this->senha = $umaSenha;
+        $this->dataNasc = $umaDataNasc;
+        $this->telefone = $umTelefone;
     }
 
     public function getCpf()

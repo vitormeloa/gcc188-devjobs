@@ -8,7 +8,7 @@ class Connection
     private $dataBase = "DevJobs";
     private $connection = null;
 
-    function__construct(){};
+    function __construct(){}
 
     function getConnection()
     {
@@ -18,7 +18,7 @@ class Connection
         }
         if(!$this->connection)
         {
-            die("connection failed: " . $this->connection->connect_error);
+            die("connection failed: " . connection->connect_error);
         }
         return $this->connection;
     }   
