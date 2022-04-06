@@ -1,6 +1,10 @@
 <?php
 
-import_once 
+include_once '../Persistence/Connection.php';
+include_once '../Model/Funcionario.php';
+include_once '../Persistence/FuncionarioDAO.php';
+
+echo "Antes de pegar com POST";
 
 $cpf = $_POST['cpf'];
 $nome = $_POST['nome'];
@@ -9,18 +13,18 @@ $senha = $_POST['senha'];
 $dataNasc = $_POST['dataNasc'];
 $telefone = $_POST['telefone'];
 
+echo "Depois de pegar com POST";
+
+$funcionario = new Funcionario($cpf, $nome, $email, $senha, $dataNasc, $telefone, 'A');
+
+echo "Depois de instanciar Funcionario";
+
 $connection = new Connection();
 $connection = $connection->getConnection();
 
-$inserirFuncionario = "INSERT INTO Funcionario(cpf, nome, email, senha, dataNasc, telefone, listaCurriculos) VALUES ('$cpf','$nome','$email','$senha','$dataNasc','$telefone','B')";
-    
-if($connection->query($inserirFuncionario) == TRUE)
-{
-    echo "Funcionario inserido com sucesso!";
-}
-else
-{
-    echo "Erro no cadastramento: " . $connection->error;
-}
+echo "Depois de instanciar Connection";
+
+$funcionarioDAO = new FuncionarioDAO();
+$funcionarioDAO->cadastrarFuncionario($funcionario, $connection);
 
 ?>

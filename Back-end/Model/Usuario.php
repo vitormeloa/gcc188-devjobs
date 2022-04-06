@@ -1,6 +1,6 @@
 <?php
 
-abstract class Connection
+abstract class Usuario
 {
     private $cpf;
     private $nome;
