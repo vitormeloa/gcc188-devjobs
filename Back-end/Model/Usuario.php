@@ -8,8 +8,9 @@ class Usuario
     private $senha;
     private $dataNasc;
     private $telefone;
+    private $funcionarioOrContratante;
     
-    function __construct($umCpf, $umNome, $umEmail, $umaSenha, $umaDataNasc, $umTelefone)
+    function __construct($umCpf, $umNome, $umEmail, $umaSenha, $umaDataNasc, $umTelefone, $umFuncionarioOrContratante)
     {
         $this->cpf = $umCpf;
         $this->nome = $umNome;
@@ -17,6 +18,7 @@ class Usuario
         $this->senha = $umaSenha;
         $this->dataNasc = $umaDataNasc;
         $this->telefone = $umTelefone;
+        $this->funcionarioOrContratante = $umFuncionarioOrContratante;
     }
 
     public function getCpf()
@@ -49,7 +51,10 @@ class Usuario
         return $this->telefone;
     }
     
-    
+    public function getFuncionarioOrContratante()
+    {
+        return $this->funcionarioOrContratante;
+    }
     
 }
 

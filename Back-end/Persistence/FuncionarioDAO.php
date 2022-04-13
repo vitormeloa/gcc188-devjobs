@@ -6,18 +6,20 @@ class FuncionarioDAO
 
     function cadastrarFuncionario($funcionario, $connection)
     {
-        $inserirFuncionario = "INSERT INTO Funcionario(cpf, nome, email, senha, dataNasc, telefone, listaCurriculos) VALUES ('". $funcionario->getCpf() . "','" . $funcionario->getNome() . "','" . $funcionario->getEmail() . "','" . $funcionario->getSenha() . "','" . $funcionario->getDataNasc() . "','" . $funcionario->getTelefone() . "','A')";
+        $inserirFuncionario = "INSERT INTO Usuario(cpf, nome, email, senha, dataNasc, telefone) VALUES ('". $funcionario->getCpf() . "','" . $funcionario->getNome() . "','" . $funcionario->getEmail() . "','" . $funcionario->getSenha() . "','" . $funcionario->getDataNasc() . "','" . $funcionario->getTelefone() . "','" . $funcionario->getFuncionarioOrContratante . ")";
 
-        echo "<br>" . $inserirFuncionario;
-        /*if($connection->query($inserirFuncionario) == TRUE)
+        if($connection->query($inserirFuncionario) == TRUE)
         {
             echo "Funcionario inserido com sucesso!";
         }
         else
         {
             echo "Erro no cadastramento: " . $connection->error;
-        }*/
+        }
     }
+
+    
+
 }
 
 ?> 

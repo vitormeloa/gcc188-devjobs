@@ -1,5 +1,7 @@
 <!DOCTYPE html>
+
 <html lang="pt_BR">
+
     <head>
         <!-- PAGE INFO -->
         <meta charset="UTF-8" />
@@ -13,49 +15,66 @@
         href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap"
         rel="stylesheet" />
     </head>
+
     <body>
-        <header id="header">
-            <nav class="container">
-                <a class="logo" href="#">Dev<span>Jobs</span></a>
+
+        <header id = "header">
+            <nav class = "container">
+                <a class = "logo" href = "#">Dev<span>Jobs</span></a>
             </nav>
         </header>
         
         <main>
-            <div class="loginBox">
-                <section class="section">
-                    <div class="container grid">
-                        <form autocomplete="off">
+
+            <div class = "loginBox">
+
+                <section class = "section">
+
+                    <div class = "container grid">
+
+                        <form action = "Back-end/Controller/verificarLogin.php" method = "POST" autocomplete="off">
+
                             <div class = "info">
-                                <img src="Front-end/images/Logo.png" alt="Pessoa segurando cadeado">
+                                <img src = "Front-end/images/Logo.png" alt = "Pessoa segurando cadeado">
                                 <h2>Login</h2>
                                 <br>
                             </div>
-                            <!--Implementacao do campo do Email-->
-                            <div class="userBox">
-                                <label for="email">Email:</label>
+
+                            <!--Implementacao do campo do CPF-->
+                            <div class = "userBox">
+                                <label for = "cpf">CPF:</label>
                                 <br>    
-                                <input type="email" name="email">
+                                <input type = "text" name = "cpf" pattern = "\d{3}\.?\d{3}\.?\d{3}-?\d{2}">
                                 <br>
                             </div>
                             
                             <!--Implementacao do campo Senha-->
-                            <div class="userBox">
+                            <div class = "userBox">
                                 <br>
-                                <label for="senha">Senha:</label>
-                                <input type="password" name="senha">
+                                <label for = "senha">Senha:</label>
+                                <input type = "password" name = "senha">
                             </div>
-                            <div class="buttons">
+
+                            <div class = "buttons">
                                 <br>
-                                <a href="Front-end/views/paginaInicialAdministrador.html" class="button" type="button">Logar</a>
+                                <button class = "button" type="submit">Logar</button>
                                 <!--Botao de Registro-->
                                 <p>Não tem uma conta?</p>
                                 <a href="Front-end/views/funcionarioOrContratante.html" class="button" type="button">Cadastrar</a>
                             </div>
+
                         </form>
+
                     </div>
+
                 </section>
+
             </div>
-                <img src="Front-end/images/image-background-green.jpeg" class="background">
+            
+            <img src="Front-end/images/image-background-green.jpeg" class="background">
+
         </main>
+
     </body>
+
 </html>

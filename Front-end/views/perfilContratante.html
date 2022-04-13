@@ -1,143 +1,130 @@
 <!DOCTYPE html>
+
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfil|DevJobs</title>
-    <link rel="stylesheet" href="../css/estilo.css">
-</head>
-<body>
-    <header id="header">
-        <nav class="container">
-            <a class="logo" href="#">Dev<span>Jobs</span></a>
-        </nav>
-    </header>
-    <div class="loginBox">
-        <section class="section">
-            <div class="container grid">
-                <form autocomplete="off" id="login">
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <h2>Perfil</h2>
-            </div>
 
-    <div class="userBox">
-        <label for = "cpf">*CPF:</label>
-        <br>
-        <input type = "text" name = "cpf" id = "" pattern = "\d{3}\.?\d{3}\.?\d{3}-?\d{2}">
-        <br>
-    </div>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Perfil|DevJobs</title>
+        <link rel="stylesheet" href="../css/estilo.css">
+    </head>
 
-    <div class="userBox">
-        <label for="Nome">*Nome Completo:</label>
-        <br>
-        <input type="text" name="Nome" id="Nome">
-        <br>
-    </div>
+    <body>
+        <header id="header">
+            <nav class="container">
+                <a class="logo" href="#">Dev<span>Jobs</span></a>
+            </nav>
+        </header>
 
-    <div class="userBox">
-        <br>
-        <label for="Email-Cadas">*Email:</label>
-        <br>
-        <input type="email" name="Email" id="Email-Cadas">
-        <br>
-    </div>
+        <div class="loginBox">
 
-    <div class="userBox">userBox
-        <br>
-        <label for="Senha-Cadas">*Senha:</label>
-        <br>
-        <input type="password" name="Senha" id="Senha-Cadas">
-        <br>
-    </div>
+            <section class="section">
 
-    <div class="userBox">
-        <br>
-        <label for="Senha-conf">*Confirme sua Senha:</label>
-        <br>
-        <input type="password" name="Senha" id="Senha-conf">
-        <br>
-    </div>
-    
-    <div class="userBox">
-        <br>
-        <label for="Telefone">Telefone</label>
-        <br>
-        <input type="phone" name="Telefone" id="Telefone">
-        <br>
-    </div>
+                <div class="container grid">
 
-    <div class="userBox">
-        <br>
-        <label for="Data-Nas">*Data de Nascimento:</label>
-        <br>
-        <input type="date" id="Data-Nas">
-        <br>
-    </div>
+                    <form autocomplete="off">
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <h2>Perfil</h2>
+                                </div>
 
-    <div class="userBox">
-        <br>
-        <label for = "nomeEmpresa">*Nome da sua Empresa:</label>
-        <br>
-        <input type = "text" name = "nomeEmpresa" id = "">
-        <br>
-    </div>
+                        <div class="userBox">
+                            <label for = "cpf">CPF:</label>
+                            <br>
+                            <input type = "text" name = "cpf" pattern = "\d{3}\.?\d{3}\.?\d{3}-?\d{2}" disabled>
+                            <br>
+                        </div>
 
-    <div class="userBox">
-        <br>
-        <label for = "cpnjEmpresa">*CNPJ da Empresa:</label>
-        <br>
-        <input type = "text" name = "cpnjEmpresa" id = "" pattern = "\d{2}\.?\d{3}\.?\d{3}/?\d{4}-?\d{2}">
-        <br>
-    </div>
+                        <div class="userBox">
+                            <label for = "nome">Nome Completo:</label>
+                            <br>
+                            <input type = "text" name = "nome" disabled>
+                            <br>
+                        </div>
 
-    <div class ="userBox">
-        <br>
-        <label for = "dataAberturaEmpresa">*Data de Abertura da Empresa:</label>
-        <br>
-        <input type = "date" name = "dataAberturaEmpresa" id = "">
-        <br>
-    </div>
+                        <div class="userBox">
+                            <br>
+                            <label for = "email">Email:</label>
+                            <br>
+                            <input type = "email" name = "email" disabled>
+                            <br>
+                        </div>
 
-    <div class ="userBox">
-        <br>
-        <!--Esse href nao vai pra pagina inicial nao, tem que encerrar a conexao do cara e exigir login-->
-        <a href="../../perfilContratante.html" target="_blank" class="button" type="button">Alterar Dados</a>
-    </div>
-                </form>
-            </div>
-        </section>
-    </div>
-</body>
+                        <div class="userBox">
+                            <br>
+                            <label for = "senha">Senha:</label>
+                            <br>
+                            <input type = "password" name = "senha" disabled>
+                            <br>
+                        </div>
+                        
+                        <div class="userBox">
+                            <br>
+                            <label for = "telefone">Telefone:</label>
+                            <br>
+                            <input type="phone" name = "telefone" disabled>
+                            <br>
+                        </div>
+
+                        <div class="userBox">
+                            <br>
+                            <label for = "dataNasc">Data de Nascimento:</label>
+                            <br>
+                            <input type = "date" name = "dataNasc" disabled>
+                            <br>
+                        </div>
+
+                        <div class="userBox">
+                            <br>
+                            <label for = "nomeEmpresa">Nome Empresa:</label>
+                            <br>
+                            <input type = "text" name = "nomeEmpresa" disabled>
+                            <br>
+                        </div>
+
+                        <div class="userBox">
+                            <br>
+                            <label for = "cnpj">CNPJ:</label>
+                            <br>
+                            <input type = "text" name = "cnpj" disabled>
+                            <br>
+                        </div>
+
+                        <div class="userBox">
+                            <br>
+                            <label for = "dataAberturaEmpresa">Data de Abertura da Empresa:</label>
+                            <br>
+                            <input type = "date" name = "dataAberturaEmpresa" disabled>
+                            <br>
+                        </div>
+
+                        <div class ="userBox">
+                            <br>
+                            <a href="perfilContratanteAlterar.html" target="_blank" class="button" type="button">Alterar Dados</a>
+                            <br>
+                            <a href="excluirContratante.html" target="_blank" class="button" type="button">Excluir Conta</a>
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </body>
+
 </html>

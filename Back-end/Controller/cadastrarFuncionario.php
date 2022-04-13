@@ -18,6 +18,6 @@ $connection = new Connection();
 $connection = $connection->getConnection();
 
 $funcionarioDAO = new FuncionarioDAO();
-$funcionarioDAO->cadastrarFuncionario($funcionario);
+$funcionarioDAO->cadastrarFuncionario($funcionario, $connection);
 
 ?>
