@@ -2,7 +2,6 @@
 
 include_once '../Persistence/Connection.php';
 include_once '../Model/Funcionario.php';
-include_once '../Persistence/FuncionarioDAO.php';
 include_once '../Persistence/UsuarioDAO.php';
 
 $cpf = $_POST['cpf'];
@@ -18,9 +17,17 @@ $connection = $connection->getConnection();
 $funcionario = new Funcionario($cpf, $nome, $email, $senha, $dataNasc, $telefone);
 
 $usuarioDAO = new UsuarioDAO();
-$usuarioDAO->cadastrarUsuario($funcionario, $connection);
 
-$funcionarioDAO = new FuncionarioDAO();
-$funcionarioDAO->cadastrarFuncionario($funcionario, $connection);
+if($usuarioDAO->alterarUsuario($funcionario, $connection))
+{
+    echo "Usuário alterado com sucesso!";
+    header("Location: consultarUsuario.php");
+}
+else
+{
+    echo "Erro na alteração dos dados!" . $connection->error();
+    header("Location: consultarUsuario.php");
+}
+
 
 ?>

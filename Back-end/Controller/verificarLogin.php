@@ -10,16 +10,16 @@ $connection = new Connection();
 $connection = $connection->getConnection();
 
 $usuarioDAO = new UsuarioDAO();
-$user = $usuarioDAO->consultarCPF($cpf, $connection);
+$user = $usuarioDAO->consultarUsuario($cpf, $connection);
 
 if($user->num_rows > 0)
 {
     $user = $user->fetch_assoc();
-    if($user['senha'] == $senha and $user['listaCurriculos'] == 'A')
+    if($user['senha'] == $senha and $user['funcionarioOrContratante'] == 'F')
     {
         header("Location: ../../Front-end/views/paginaInicialFuncionario.html");
     }
-    else if($user['senha'] == $senha and $user['listaCurriculos'] == 'B')
+    else if($user['senha'] == $senha and $user['funcionarioOrContratante'] == 'C')
     {
         header("Location: ../../Front-end/views/paginaInicialContratante.html");
     }
