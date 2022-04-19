@@ -12,7 +12,7 @@ $senha = $_POST['senha'];
 $dataNasc = $_POST['dataNasc'];
 $telefone = $_POST['telefone'];
 $nomeEmpresa = $_POST['nomeEmpresa'];
-$cpnj = $_POST['cpnj'];
+$cnpj = $_POST['cnpj'];
 $dataAberturaEmpresa = $_POST['dataAberturaEmpresa'];
 
 $connection = new Connection();

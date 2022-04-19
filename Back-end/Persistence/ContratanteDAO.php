@@ -29,7 +29,7 @@ class ContratanteDAO
 
     function alterarContratante($contratante, $connection)
     {
-        $alterarContratante = "UPDATE Contratante SET nomeEmpresa = '" . $contratante->getNomeEmpresa() . "', cnpj = '" . $contratante->getCnpj() . "', dataAberturaEmpresa = '" . $contratante->getDataAberturaEmpresa() . "' WHERE cpfContratante = " . $contratante->getCpf();
+        $alterarContratante = "UPDATE Contratante SET nomeEmpresa = '" . $contratante->getNomeEmpresa() . "', CNPJ = '" . $contratante->getCnpj() . "', dataAberturaEmpresa = '" . $contratante->getDataAberturaEmpresa() . "' WHERE cpfContratante = " . $contratante->getCpf();
         return $connection->query($alterarContratante);
     }
 

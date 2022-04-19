@@ -117,7 +117,7 @@ if($user['funcionarioOrContratante'] == 'F')
                                 <br>
                                 <button class='button' type='submit'>Alterar Dados</button>
                                 <br>
-                                <a href = '../../Front-end/views/excluirFuncionario.html' class = 'button' type = 'button'>Excluir Conta</a>
+                                <a href = '../../Front-end/views/excluirUsuario.html' class = 'button' type = 'button'>Excluir Conta</a>
                             </div>
 
                             <div class = 'userBox'>
@@ -244,10 +244,10 @@ else
 
                             <div class = 'userBox'>
                                 <br>
-                                <label for = 'cpnj'>CNPJ da Empresa:</label>
+                                <label for = 'cnpj'>CNPJ da Empresa:</label>
                                 <br>
-                                <input type = 'text' name = 'cpnj' value = '" . $contratante['CNPJ'] . "' pattern = '\d{2}\.?\d{3}\.?\d{3}/?\d{4}-?\d{2}' hidden>
-                                <input type = 'text' name = 'cpnj' value = '" . $contratante['CNPJ'] . "' pattern = '\d{2}\.?\d{3}\.?\d{3}/?\d{4}-?\d{2}' disabled>
+                                <input type = 'text' name = 'cnpj' value = '" . $contratante['CNPJ'] . "' pattern = '\d{2}\.?\d{3}\.?\d{3}/?\d{4}-?\d{2}' hidden>
+                                <input type = 'text' name = 'cnpj' value = '" . $contratante['CNPJ'] . "' pattern = '\d{2}\.?\d{3}\.?\d{3}/?\d{4}-?\d{2}' disabled>
                                 <br>
                             </div>
 
@@ -263,8 +263,13 @@ else
                             <div class = 'userBox'>
                                 <br>
                                 <button class = 'button' type = 'submit'>Alterar Dados</button>
-                                <br><!--Devia ser excluirUsuario.html-->
-                                <a href = '../../Front-end/views/excluirFuncionario.html' class = 'button' type = 'button'>Excluir Conta</a>
+                                <br>
+                                <a href = '../../Front-end/views/excluirUsuario.html' class = 'button' type = 'button'>Excluir Conta</a>
+                            </div>
+
+                            <div class = 'userBox'>
+                                <br>
+                                <a href = '../../Front-end/views/paginaInicialContratante.html' class = 'button' type = 'button'>Voltar</a>
                             </div>
 
                         </form>

@@ -1,30 +1,32 @@
 <!DOCTYPE html>
 
 <html lang="pt-BR">
-
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Cadastre-se</title>
+        <title>Cadastrar Currículo</title>
         <link rel="stylesheet" href="../css/estilo.css">
     </head>
-    
+
     <body>
+
         <header id="header">
+            
             <nav class="container">
                 <a class="logo" href="#">Dev<span>Jobs</span></a>
             </nav>
+
         </header>
-            
+        
         <main>
 
-            <div class="loginBox">
+            <div class = "loginBox">
 
-                <section class="section">
+                <section class = "section">
 
-                    <div class="container grid">
+                    <div class = "container grid">
 
-                        <form action = "../../Back-end/Controller/cadastrarContratante.php" method = "POST" autocomplete="off">
+                        <form action = "../../Back-end/Controller/cadastrarCurriculo.php" method = "POST" autocomplete="off">
                             <br>
                             <br>
                             <br>
@@ -54,48 +56,30 @@
                             <br>
                             <br>
                             <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
+                            <br>        
                             <img src="../images/Cadastro.png" alt="" width=200 height=100>
-                                <h2>Cadastro Contratante</h2>
-                                <br>
+                            <h2>Cadastro Currículo</h2>
+                            <br>
 
                             <div class = "userBox">
-                                <label for = "cpf">*CPF:</label>
+                                <label for = "cidadeOrigem">*Cidade de Origem:</label>
                                 <br>
-                                <input type = "text" name = "cpf" pattern = "\d{3}\.?\d{3}\.?\d{3}-?\d{2}">
+                                <input type = "text" name = "cidadeOrigem">
                                 <br>
                             </div>
 
                             <div class = "userBox">
-                                <label for = "nome">*Nome Completo:</label>
+                                <label for = "estadoOrigem">*Estado de Origem:</label>
                                 <br>
-                                <input type = "text" name="nome">
+                                <input type = "text" name = "estadoOrigem">
                                 <br>
                             </div>
 
                             <div class = "userBox">
                                 <br>
-                                <label for = "email">*Email:</label>
+                                <label for = "github">*Github:</label>
                                 <br>
-                                <input type = "email" name = "email">
+                                <input type = "" name = "github">
                                 <br>
                             </div>
 
@@ -106,10 +90,10 @@
                                 <input type = "password" name = "senha">
                                 <br>
                             </div>
-                            
+                        
                             <div class = "userBox">
                                 <br>
-                                <label for = "telefone">Telefone</label>
+                                <label for = "telefone">Telefone:</label>
                                 <br>
                                 <input type = "phone" name = "telefone">
                                 <br>
@@ -120,30 +104,6 @@
                                 <label for = "dataNasc">*Data de Nascimento:</label>
                                 <br>
                                 <input type = "date" name = "dataNasc">
-                                <br>
-                            </div>
-
-                            <div class = "userBox">
-                                <br>
-                                <label for = "nomeEmpresa">*Nome da sua Empresa:</label>
-                                <br>
-                                <input type = "text" name = "nomeEmpresa">
-                                <br>
-                            </div>
-
-                            <div class = "userBox">
-                                <br>
-                                <label for = "cnpj">*CNPJ da Empresa:</label>
-                                <br>
-                                <input type = "text" name = "cnpj" pattern = "\d{2}\.?\d{3}\.?\d{3}/?\d{4}-?\d{2}">
-                                <br>
-                            </div>
-
-                            <div class = "userBox">
-                                <br>
-                                <label for = "dataAberturaEmpresa">*Data de Abertura da Empresa:</label>
-                                <br>
-                                <input type = "date" name = "dataAberturaEmpresa">
                                 <br>
                             </div>
 

@@ -23,7 +23,7 @@
 
                 <div class="container grid">
 
-                    <form action = ../../Back-end/Controller/excluirContratante.php method = "POST" autocomplete = "off">
+                    <form action = "../../Back-end/Controller/excluirUsuario.php" method = "POST" autocomplete = "off">
                         <br>
                         <br>
                         <br>
@@ -39,11 +39,20 @@
                         <br>
                         <h2>Perfil</h2>
 
+                        <br>
+                        <p>Se deseja realmente excluir sua conta, informe abaixo seu CPF.</p>
+                        <br>
+
                         <div class="userBox">
-                            <p>Se deseja realmente excluir sua conta, informe abaixo seu CPF</p>
                             <label for = "cpf">CPF:</label>
                             <br>
-                            <input type = "text" name = "cpf" pattern = "\d{3}\.?\d{3}\.?\d{3}-?\d{2}" disabled>
+                            <input type = "text" name = "cpf" pattern = "\d{3}\.?\d{3}\.?\d{3}-?\d{2}">
+                            <br>
+                        </div>
+
+                        <div class = 'userBox'>
+                            <br>
+                            <button class='button' type='submit'>Excluir Conta</button>
                             <br>
                         </div>
 

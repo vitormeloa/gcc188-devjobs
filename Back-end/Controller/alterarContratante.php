@@ -131,6 +131,11 @@ echo "<!DOCTYPE html>
                                 <br>
                             </div>
 
+                            <div class = 'userBox'>
+                                <br>
+                                <a href = 'consultarUsuario.php' class = 'button' type = 'button'>Voltar</a>
+                            </div>
+
                         </form>
 
                     </div>
