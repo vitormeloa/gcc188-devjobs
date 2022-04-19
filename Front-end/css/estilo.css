@@ -18,6 +18,12 @@ img {
     height: auto;
 }
 
+body {
+    background-image: url(../images/image-background-green.jpeg);
+    background-repeat:repeat;
+    background-size:cover;
+}
+
 p {
     color: var(--text-color-light);
 }
@@ -60,19 +66,23 @@ body {
 }
 
 .button {
+
     background-color: var(--title-color);
-    color: var(--text-color-light);
-    border: 0;
-    cursor: pointer;
-    border-radius: 20px;
-    color: white;
-    display: grid;
-    align-items: center;
-    justify-content: center;    
-    height: 2.5rem;
-    padding: 0 2rem;
+    color: var(--text-color-light);;   
     font: 400 1rem 'DM Sans', sans-serif;
     transition: background 0.3s;
+    color: var(--base-color);
+    font-size: 16px;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    letter-spacing: 4px;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    border: 1px solid;
+    padding: 11px 21px;
+    vertical-align: middle;
 }
 
 .button:hover {
@@ -174,6 +184,12 @@ body {
     margin: 0 0 30px;
     padding: 0;
     color: #fff;
+    text-align: block;
+}
+.loginBox h1 {
+    margin: 0 0 30px;
+    padding: 0;
+    color: #fff;
     text-align: center;
 }
 
@@ -213,13 +229,16 @@ body {
 }
 
 .loginBox form a {
-    position: inline-block;
     color: var(--base-color);
     font-size: 16px;
-    text-decoration: none;
     text-transform: uppercase;
     overflow: hidden;
     transition: .5s;
-    margin-top: 20px;
-    letter-spacing: 4px
+    letter-spacing: 4px;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    border: 1px solid;
+    padding: 11px 21px;
+    vertical-align: middle;
 }
