@@ -17,23 +17,28 @@
             </nav>
         </header>
 
-        <br><br><br>
-
         <form action = "../../Back-end/Controller/consultarUsuario.php" method = "POST" autocomplete = "off">
-            <div class = "userBox">
-                <label for = "cpf">Digite seu CPF:</label>
-                <br>
-                <input type = "text" name = "cpf" pattern = "\d{3}\.?\d{3}\.?\d{3}-?\d{2}" required>
-                <br>
-            </div>
-
-            <div class = "userBox">
-                <br>
-                <button class = "button" type = "submit">Enviar</button>
+            <div class="loginBox">
+                <section class="section">
+                    <div class = "userBox">
+                        <label for = "cpf">Digite seu CPF:</label>
+                        <br>
+                        <br>
+                        <input type = "text" name = "cpf" pattern = "\d{3}\.?\d{3}\.?\d{3}-?\d{2}">
+                        <br>
+                    </div>
+        
+                    <div class = "userBox">
+                        <br>
+                        <button class = "button" type = "submit">Enviar</button>
+                    </div>
+                </section>
             </div>
 
         </form>
         
+    <img src="../images/image-background-green.jpeg" alt="">
+
     </body>
 
 </html>
