@@ -21,6 +21,17 @@ $connection = $connection->getConnection();
 $curriculo = new Curriculo($cidadeOrigem, $estadoOrigem, $github, $linkedIn, $objetivo, $formacaoAcademica, $expProfissionaisRelevantes, $especialidade, $cpf, $curriculoNome);
 
 $curriculoDAO = new CurriculoDAO();
-$curriculoDAO->cadastrarCurriculo($curriculo, $connection);
+
+if($curriculoDAO->alterarCurriculo($curriculo, $connection))
+{
+    echo "Curriculo alterado com sucesso!";
+    header("Location: ../../Front-end/views/curriculosFuncionario.html");
+}
+else
+{
+    echo "Erro na alteração dos dados!" . $connection->error();
+    header("Location: ../../Front-end/views/curriculosFuncionario.html");
+}
+
 
 ?>

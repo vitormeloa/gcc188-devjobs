@@ -14,7 +14,7 @@ $telefone = $_POST['telefone'];
 $connection = new Connection();
 $connection = $connection->getConnection();
 
-$contratante = new Funcionario($cpf, $nome, $email, $senha, $dataNasc, $telefone);
+$funcionario = new Funcionario($cpf, $nome, $email, $senha, $dataNasc, $telefone);
 
 $usuarioDAO = new UsuarioDAO();
 

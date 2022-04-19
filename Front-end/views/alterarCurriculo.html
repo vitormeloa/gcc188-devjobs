@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Perfil|DevJobs</title>
+        <link rel="stylesheet" href="../css/estilo.css">
+    </head>
+
+    <body>
+        <header id="header">
+            <nav class="container">
+                <a class="logo" href="#">Dev<span>Jobs</span></a>
+            </nav>
+        </header>
+
+        <br><br><br>
+
+        <form action = "../../Back-end/Controller/consultarCurriculo.php" method = "POST" autocomplete = "off">
+            <div class = "userBox">
+                <label for = "curriculoNome">Digite o nome do Currículo, exatamente igual ao criado no cadastramento, que deseja alterar:</label>
+                <br>
+                <input type = "text" name = "curriculoNome" required>
+                <br>
+            </div>
+
+            <div class = "userBox">
+                <br>
+                <button class = "button" type = "submit">Enviar</button>
+            </div>
+
+        </form>
+        
+    </body>
+
+</html>
