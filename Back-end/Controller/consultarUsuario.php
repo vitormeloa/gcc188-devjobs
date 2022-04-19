@@ -3,6 +3,7 @@
 include_once '../Persistence/Connection.php';
 include_once '../Model/Usuario.php';
 include_once '../Persistence/UsuarioDAO.php';
+include_once '../Persistence/ContratanteDAO.php';
 
 $cpf = $_POST['cpf'];
 
@@ -12,6 +13,10 @@ $connection = $connection->getConnection();
 $usuarioDAO = new UsuarioDAO();
 $user = $usuarioDAO->consultarUsuario($cpf, $connection);
 
+$contratanteDAO = new ContratanteDAO();
+$contratante = $contratanteDAO->consultarContratante($cpf, $connection);
+
+$contratante = $contratante->fetch_assoc();
 $user = $user->fetch_assoc();
 if($user['funcionarioOrContratante'] == 'F')
 {
@@ -113,6 +118,12 @@ if($user['funcionarioOrContratante'] == 'F')
                                 <button class='button' type='submit'>Alterar Dados</button>
                                 <br>
                                 <a href = '../../Front-end/views/excluirFuncionario.html' class = 'button' type = 'button'>Excluir Conta</a>
+                            </div>
+
+                            <div class = 'userBox'>
+                                <br>
+                                <a href = '../../Front-end/views/paginaInicialFuncionario.html' class='button' type='button'>Voltar</a>
+                                <br>
                             </div>
 
                         </form>
@@ -226,8 +237,8 @@ else
                                 <br>
                                 <label for = 'nomeEmpresa'>Nome da sua Empresa:</label>
                                 <br>
-                                <input type = 'text' name = 'nomeEmpresa' value = '" . $user['nomeEmpresa'] . "' hidden>
-                                <input type = 'text' name = 'nomeEmpresa' value = '" . $user['nomeEmpresa'] . "' disabled>
+                                <input type = 'text' name = 'nomeEmpresa' value = '" . $contratante['nomeEmpresa'] . "' hidden>
+                                <input type = 'text' name = 'nomeEmpresa' value = '" . $contratante['nomeEmpresa'] . "' disabled>
                                 <br>
                             </div>
 
@@ -235,8 +246,8 @@ else
                                 <br>
                                 <label for = 'cpnj'>CNPJ da Empresa:</label>
                                 <br>
-                                <input type = 'text' name = 'cpnj' value = '" . $user['CNPJ'] . "' pattern = '\d{2}\.?\d{3}\.?\d{3}/?\d{4}-?\d{2}' hidden>
-                                <input type = 'text' name = 'cpnj' value = '" . $user['CNPJ'] . "' pattern = '\d{2}\.?\d{3}\.?\d{3}/?\d{4}-?\d{2}' disabled>
+                                <input type = 'text' name = 'cpnj' value = '" . $contratante['CNPJ'] . "' pattern = '\d{2}\.?\d{3}\.?\d{3}/?\d{4}-?\d{2}' hidden>
+                                <input type = 'text' name = 'cpnj' value = '" . $contratante['CNPJ'] . "' pattern = '\d{2}\.?\d{3}\.?\d{3}/?\d{4}-?\d{2}' disabled>
                                 <br>
                             </div>
 
@@ -244,8 +255,8 @@ else
                                 <br>
                                 <label for = 'dataAberturaEmpresa'>Data de Abertura da Empresa:</label>
                                 <br>
-                                <input type = 'date' name = 'dataAberturaEmpresa' value = '" . $user['dataAberturaEmpresa'] . "' hidden>
-                                <input type = 'date' name = 'dataAberturaEmpresa' value = '" . $user['dataAberturaEmpresa'] . "' disabled>
+                                <input type = 'date' name = 'dataAberturaEmpresa' value = '" . $contratante['dataAberturaEmpresa'] . "' hidden>
+                                <input type = 'date' name = 'dataAberturaEmpresa' value = '" . $contratante['dataAberturaEmpresa'] . "' disabled>
                                 <br>
                             </div>
 
