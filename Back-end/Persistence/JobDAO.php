@@ -1,12 +1,12 @@
 <?php
 
-class CurriculoDAO
+class jobDAO
 {
     function __construct(){}
 
-    function jobCurriculo($job, $connection)
+    function cadastrarJob($job, $connection)
     {
-        $inserirJob = "INSERT INTO Job(nome, qtdVagas, descricao, requisitos, beneficios, salario, remoto, cpfContratante) VALUES ('" . $job->getJobNome() . "'," . $job->getQtdVagas() . ",'" . $job->getDescricao() . "','" . $job->getRequisitos() . "','" . $job->getBeneficios() . "'," . $job->getSalario() . ",'" . $job->getRemoto() . "','" . $curriculo->getCpfContratante() . "')";
+        $inserirJob = "INSERT INTO Jobs(nome, qtdVagas, descricao, requisitos, beneficios, salario, remoto, cpfContratante) VALUES ('" . $job->getJobNome() . "'," . $job->getQtdVagas() . ",'" . $job->getDescricao() . "','" . $job->getRequisitos() . "','" . $job->getBeneficios() . "'," . $job->getSalario() . ",'" . $job->getRemoto() . "','" . $job->getCpfContratante() . "')";
 
         if($connection->query($inserirJob) == TRUE)
         {
@@ -22,7 +22,7 @@ class CurriculoDAO
 
     function excluirJob($jobNome, $connection)
     {
-        $excluirJob = "DELETE FROM Job WHERE nome = '" . $jobNome . "'";
+        $excluirJob = "DELETE FROM Jobs WHERE nome = '" . $jobNome . "'";
 
         if($connection->query($excluirJob) == TRUE)
         {
@@ -38,20 +38,20 @@ class CurriculoDAO
 
     function alterarJob($job, $connection)
     {
-        $alterarUsuario = "UPDATE Job SET qtdVagas = " . $job->getQtdVagas() . ", descricao = '" . $job->getDescricao() . "', requisitos = '" . $job->getRequisitos() . "', beneficios = '" . $job->getBeneficios() . "', salario = '" . $job->getSalario() . "', remoto = '" . $job->getRemoto() . "' WHERE nome = '" . $job->getJobNome() . "'";
+        $alterarJob = "UPDATE Jobs SET qtdVagas = " . $job->getQtdVagas() . ", descricao = '" . $job->getDescricao() . "', requisitos = '" . $job->getRequisitos() . "', beneficios = '" . $job->getBeneficios() . "', salario = " . $job->getSalario() . ", remoto = '" . $job->getRemoto() . "' WHERE nome = '" . $job->getJobNome() . "'";
         return $connection->query($alterarJob);
     }
 
     function consultarJob($jobNome, $connection)
     {
-        $consultarJob = "SELECT * FROM Job WHERE nome = '" . $jobNome . "'";
+        $consultarJob = "SELECT * FROM Jobs WHERE nome = '" . $jobNome . "'";
         $job = $connection->query($consultarJob);
         return $job;
     }
 
     function consultarTodosJobs($connection)
     {
-        $consultarJobs = "SELECT * FROM Job";
+        $consultarJobs = "SELECT * FROM Jobs";
         $jobs = $connection->query($consultarJobs);
         return $jobs;
     }

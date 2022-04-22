@@ -4,33 +4,31 @@ include_once '../Persistence/Connection.php';
 include_once '../Model/Job.php';
 include_once '../Persistence/JobDAO.php';
 
-$nomeJob = $_POST['cidadeOrigem'];
-$estadoOrigem = $_POST['estadoOrigem'];
-$github = $_POST['github'];
-$linkedIn = $_POST['linkedIn'];
-$objetivo = $_POST['objetivo'];
-$formacaoAcademica = $_POST['formacaoAcademica'];
-$expProfissionaisRelevantes = $_POST['expProfissionaisRelevantes'];
-$especialidade = $_POST['especialidade'];
-$cpf = $_POST['cpf'];
-$curriculoNome = $_POST['curriculoNome'];
+$jobNome = $_POST['jobNome'];
+$qtdVagas = $_POST['qtdVagas'];
+$descricao = $_POST['descricao'];
+$requisitos = $_POST['requisitos'];
+$beneficios = $_POST['beneficios'];
+$salario = $_POST['salario'];
+$remoto = $_POST['remoto'];
+$cpfContratante = $_POST['cpfContratante'];
 
 $connection = new Connection();
 $connection = $connection->getConnection();
 
-$curriculo = new Curriculo($cidadeOrigem, $estadoOrigem, $github, $linkedIn, $objetivo, $formacaoAcademica, $expProfissionaisRelevantes, $especialidade, $cpf, $curriculoNome);
+$job = new Job($jobNome, $qtdVagas, $descricao, $requisitos, $beneficios, $salario, $remoto, $cpfContratante);
 
-$curriculoDAO = new CurriculoDAO();
+$jobDAO = new JobDAO();
 
-if($curriculoDAO->alterarCurriculo($curriculo, $connection))
+if($jobDAO->alterarJob($job, $connection))
 {
-    echo "Curriculo alterado com sucesso!";
-    header("Location: ../../Front-end/views/curriculosFuncionario.html");
+    echo "Job alterado com sucesso!";
+    header("Location: ../../Front-end/views/jobsContratante.html");
 }
 else
 {
     echo "Erro na alteração dos dados!" . $connection->error();
-    header("Location: ../../Front-end/views/curriculosFuncionario.html");
+    header("Location: ../../Front-end/views/jobsContratante.html");
 }
 
 

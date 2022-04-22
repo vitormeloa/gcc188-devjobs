@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 <html lang="pt-BR">
+
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -26,7 +27,7 @@
 
                     <div class = "container grid">
 
-                        <form action = "../../Back-end/Controller/cadastrarCurriculo.php" method = "POST" autocomplete="off">
+                        <form action = "../../Back-end/Controller/cadastrarJob.php" method = "POST" autocomplete="off">
                             <br>
                             <br>
                             <br>
@@ -54,42 +55,42 @@
                             <h1>Cadastro Job</h1>
                             <br>
                             <div class = "userBox">
-                                <label for = "jobNome">Nome do Job:</label>
+                                <label for = "jobNome">*Nome do Job:</label>
                                 <br>
                                 <br>
-                                <input type = "text" name = "jobNome" maxlength = "50" required>
-                                <br>
-                            </div>
-
-                            <div class = "userBox">
-                                <label for = "qtdVagas">Quantidade de vagas:</label>
-                                <br>
-                                <br>
-                                <input type = "number" name = "qtdVagas" step = "1" min = "1" required>
+                                <input type = "text" name = "jobNome" placeholder = "Dê um nome único :D" maxlength = "50" required>
                                 <br>
                             </div>
 
                             <div class = "userBox">
+                                <label for = "qtdVagas">*Quantidade de vagas:</label>
                                 <br>
-                                <label for = "descricao">Descrição:</label>
                                 <br>
-                                <input type = "url" name = "descricao" maxlength = "300" required>
+                                <input type = "number" name = "qtdVagas" placeholder = "No mínimo 1 vaga" step = "1" min = "1" required>
                                 <br>
                             </div>
 
                             <div class = "userBox">
                                 <br>
-                                <label for = "requisitos">Requisitos:</label>
+                                <label for = "descricao">*Descrição:</label>
                                 <br>
-                                <input type = "url" name = "requisitos" maxlength = "200" required>
+                                <input type = "text" name = "descricao" placeholder = "Pequena descrição da vaga" maxlength = "300" required>
+                                <br>
+                            </div>
+
+                            <div class = "userBox">
+                                <br>
+                                <label for = "requisitos">*Requisitos:</label>
+                                <br>
+                                <input type = "text" name = "requisitos" placeholder = "Pequena descrição dos requisitos" maxlength = "200" required>
                                 <br>
                             </div>
                         
                             <div class = "userBox">
                                 <br>
-                                <label for = "beneficios">Benefícios:</label>
+                                <label for = "beneficios">*Benefícios:</label>
                                 <br>
-                                <input type = "text" name = "beneficios" maxlength = "200" required>
+                                <input type = "text" name = "beneficios" placeholder = "Pequena descrição dos benefícios" maxlength = "200" required>
                                 <br>
                             </div>
 
@@ -98,7 +99,7 @@
                                     <br>
                                     <label for = "remoto">Remoto:</label>
                                     <br>
-                                    <select name="remoto" id = "remoto">
+                                    <select name=  "remoto">
                                         <option selected disable value = ""></option>
                                         <option>Sim</option>
                                         <option>Não</option>
@@ -109,25 +110,25 @@
                                 </div>
                             </div>
 
-                            <div class="userBox">
+                            <div class = "userBox">
                                 <br>
-                                <label for="salario">Salário:</label>
+                                <label for = "salario">Salário:</label>
                                 <br>
-                                <input type="number" name="salario">
-                                <br>
-                            </div>
-
-                            <div class="userBox">
-                                <br>
-                                <label for="cpfContratante">CPF do Contratante:</label>
-                                <br>
-                                <input type="text" name="cpfContratante" pattern = "\d{3}\.?\d{3}\.?\d{3}-?\d{2}">
+                                <input type = "number" placeholder = "Opcional" name = "salario" step = "0.01">
                                 <br>
                             </div>
 
                             <div class = "userBox">
                                 <br>
-                                <button class = "button" type = "submit">Cadastrar</button>
+                                <label for = "cpfContratante">*Informe seu CPF:</label>
+                                <br>
+                                <input type = "text" name = "cpfContratante" pattern = "\d{3}\.?\d{3}\.?\d{3}-?\d{2}">
+                                <br>
+                            </div>
+
+                            <div class = "userBox">
+                                <br>
+                                <button class = "button" type = "submit">Cadastrar Job</button>
                             </div>
 
                             <div class = "userBox">
@@ -137,7 +138,7 @@
 
                             <div class = "userBox">
                                 <br>
-                                <a href = "curriculosFuncionario.html" class = "button" type = "button">Voltar</a>
+                                <a href = "jobsContratante.html" class = "button" type = "button">Voltar</a>
                             </div>
 
                         </form>
