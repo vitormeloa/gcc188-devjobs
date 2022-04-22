@@ -89,6 +89,32 @@ body {
     background: var(--text-color);
 }
 
+.divider-1 {
+    height: 1px;
+    background: linear-gradient(
+        270deg,
+        hsl(var(--hue), 36%, 57%, 1),
+        hsl(var(--hue), 65%, 88%, 0.34)
+    );
+}
+
+.divider-2 {
+    height: 1px;
+    background: linear-gradient(
+        270deg,
+        hsl(var(--hue), 65%, 88%, 0.34),
+        hsl(var(--hue), 36%, 57%, 1)
+    );
+}
+
+#box1 {
+    display: inline-block;
+}
+
+#box2 {
+    display: inline-block;
+}
+
 /*=================== LAYOUT ===================*/
 
 .container {

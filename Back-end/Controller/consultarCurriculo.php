@@ -21,7 +21,7 @@ echo "<!DOCTYPE html>
         <meta http-equiv='X-UA-Compatible' content='IE=edge'>
         <meta name='viewport' content='width=device-width, initial-scale=1.0'>
         <title>Perfil|DevJobs</title>
-        <link rel='stylesheet' href='../../Front-end/css/estilo.css'>
+        <link rel='stylesheet' href='../css/estilo.css'>
     </head>
     
     <body>
@@ -31,121 +31,101 @@ echo "<!DOCTYPE html>
             </nav>
         </header>
 
-        <div class='loginBox'>
+        <br><br><br>
+        
+        <form action = '../../Back-end/Controller/consultarCurriculo.php' method = 'POST' autocomplete = 'off'>
+            
+            <table border='5'>
+                <div class='loginBox'>
+                    <div class = 'userBox'>
+                        <label for = 'curriculoNome'>Digite o nome do Currículo, exatamente igual ao criado no cadastramento, que deseja alterar:</label>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
 
-            <section class='section'>
+                        <tr>
+                            <td>
+                                <div class = 'userBox'>
+                                    <br>
+                                    <label for = 'github'>*Github:</label>
+                                    <br>
+                                    <input type = 'url' name = 'github' value='" . $curriculo['github'] . "'>
+                                    <br>
+                                </div>
+                            </td>
 
-                <div class='container grid'>
+                            <td>
+                                <div class = 'userBox'>
+                                    <br>
+                                    <label for = 'linkedIn'>*LinkedIn:</label>
+                                    <br>
+                                    <input type = 'url' name = 'linkedIn' value = '" . $curriculo['linkedIn'] . "'>
+                                    <br>
+                                </div>
+                            </td>
 
-                    <form action = 'alterarCurriculo.php' method = 'POST'>
-                    
-                        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-                        <h2>Alterar Curriculo</h2>
+                            <td>
+                                <div class = 'userBox'>
+                                    <br>
+                                    <label for = 'especialidade'>Especialidade:</label>
+                                    <br>
+                                    <input type = 'text' name = 'especialidade' maxlength = '30' value = '" . $curriculo['especialidade'] . "'>
+                                    <br>
+                                </div>
+                            </td>
 
-                        <div class = 'userBox'>
-                            <label for = 'cidadeOrigem'>Cidade de Origem:</label>
-                            <br>
-                            <input type = 'text' name = 'cidadeOrigem' value = '" . $curriculo['cidadeOrigem'] . "' hidden>
-                            <input type = 'text' name = 'cidadeOrigem' value = '" . $curriculo['cidadeOrigem'] . "' disabled>
-                            <br>
-                        </div>
+                            <td>
+                                <div class = 'userBox'>
+                                    <br>
+                                    <label for = 'expProfissionaisRelevantes'>Experiências Profissionais Relevantes:</label>
+                                    <br>
+                                    <input type = 'text' name = 'expProfissionaisRelevantes' maxlength = '300' value = '" . $curriculo['expProfissionaisRelevantes'] . "'>
+                                    <br>
+                                </div>
+                            </td>
 
-                        <div class = 'userBox'>
-                            <label for = 'estadoOrigem'>Estado de Origem:</label>
-                            <br>
-                            <input type = 'text' name = 'estadoOrigem' value = '" . $curriculo['estadoOrigem'] . "' hidden>
-                            <input type = 'text' name = 'estadoOrigem' value = '" . $curriculo['estadoOrigem'] . "' disabled>
-                            <br>
-                        </div>
+                            <td>
+                                <div class = 'userBox'>
+                                    <br>
+                                    <label for = 'objetivo'>*Objetivo:</label>
+                                    <br>
+                                    <input type = 'text' name = 'objetivo' maxlength = '200' value = '" . $curriculo['objetivo'] . "'>
+                                    <br>
+                                </div>
+                            </td>
 
-                        <div class = 'userBox'>
-                            <br>
-                            <label for = 'github'>Github:</label>
-                            <br>
-                            <input type = 'url' name = 'github' value = '" . $curriculo['github'] . "'>
-                            <br>
-                        </div>
+                            <td>
+                                <div class = 'userBox'>
+                                    <br>
+                                    <label for = 'formacaoAcademica'>*Formação Acadêmica:</label>
+                                    <br>
+                                    <input type = 'text' name = 'formacaoAcademica' maxlength = '150' value = '" . $curriculo['formacaoAcademica'] . "'>
+                                    <br>
+                                </div>
+                            </td>
 
-                        <div class = 'userBox'>
-                            <br>
-                            <label for = 'linkedIn'>LinkedIn:</label>
-                            <br>
-                            <input type = 'url' name = 'linkedIn' value = '" . $curriculo['linkedIn'] . "'>
-                            <br>
-                        </div>
-                    
-                        <div class = 'userBox'>
-                            <br>
-                            <label for = 'objetivo'>Objetivo:</label>
-                            <br>
-                            <input type = 'text' name = 'objetivo' value = '" . $curriculo['objetivo'] . "' maxlength = '200'>
-                            <br>
-                        </div>
+                            <td>
+                                <div class = 'userBox'>
+                                    <br>
+                                    <label for = 'especialidade'>Especialidade:</label>
+                                    <br>
+                                    <input type = 'text' name = 'especialidade' maxlength = '30' value = '" . $curriculo['especialidade'] . "'>
+                                    <br>
+                                </div>
+                            </td>
+                        </tr>
+                        <br>
+                    </div>
 
-                        <div class = 'userBox'>
-                            <br>
-                            <label for = 'formacaoAcademica'>Formação Acadêmica:</label>
-                            <br>
-                            <input type = 'text' name = 'formacaoAcademica' value = '" . $curriculo['formacaoAcademica'] . "' maxlength = '150'>
-                            <br>
-                        </div>
-
-                        <div class = 'userBox'>
-                            <br>
-                            <label for = 'expProfissionaisRelevantes'>Experiências Profissionais Relevantes:</label>
-                            <br>
-                            <input type = 'text' name = 'expProfissionaisRelevantes' value = '" . $curriculo['expProfissionaisRelevantes'] . "' maxlength = '300'>
-                            <br>
-                        </div>
-
-                        <div class = 'userBox'>
-                            <br>
-                            <label for = 'especialidade'>Especialidade:</label>
-                            <br>
-                            <input type = 'text' name = 'especialidade' value = '" . $curriculo['especialidade'] . "' maxlength = '30'>
-                            <br>
-                        </div>
-
-                        <div class = 'userBox'>
-                            <br>
-                            <label for = 'cpf'>Seu CPF:</label>
-                            <br>
-                            <input type = 'text' name = 'cpf' value = '" . $curriculo['cpfFuncionario'] . "' hidden>
-                            <input type = 'text' name = 'cpf' value = '" . $curriculo['cpfFuncionario'] . "' disabled>
-                            <br>
-                        </div>
-
-                        <div class = 'userBox'>
-                            <br>
-                            <label for = 'curriculoNome'>Nome do Currículo:</label>
-                            <br>
-                            <input type = 'text' name = 'curriculoNome' value = '" . $curriculo['nome'] . "' hidden>
-                            <input type = 'text' name = 'curriculoNome' value = '" . $curriculo['nome'] . "' disabled>
-                            <br>
-                        </div>
-
-                        <div class = 'userBox'>
-                            <br>
-                            <button class = 'button' type = 'submit'>Alterar</button>
-                        </div>
-
-                        <div class = 'userBox'>
-                            <br>
-                            <button class = 'button' type = 'reset'>Resetar Campos</button>
-                        </div>
-
-                        <div class = 'userBox'>
-                            <br>
-                            <a href = '../../Front-end/views/curriculosFuncionario.html' class = 'button' type = 'button'>Voltar</a>
-                        </div>
-
-                    </form>
-
+                <div class = 'userBox'>
+                    <br>
+                    <button class = 'button' type = 'submit'>Confirmar</button>
                 </div>
 
-            </section>
-
-        </div>
+                </div>
+        </table>
+        </form>
 
     </body>
 

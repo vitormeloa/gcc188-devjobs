@@ -38,22 +38,15 @@ class CurriculoDAO
 
     function alterarCurriculo($curriculo, $connection)
     {
-        $alterarUsuario = "UPDATE Curriculo SET github = '" . $curriculo->getGithub() . "', linkedIn = '" . $curriculo->getLinkedIn() . "', objetivo = '" . $curriculo->getObjetivo() . "', formacaoAcademica = '" . $curriculo->getFormacaoAcademica() . "', expProfissionaisRelevantes = '" . $curriculo->getExpProfissionaisRelevantes() . "', especialidade = '" . $curriculo->getEspecialidade() . "' WHERE nome = '" . $curriculo->getCurriculoNome() . "'";
+        $alterarUsuario = "UPDATE Curriculo SET github = '" . $curriculo->getGithub() . "', linkedIn = '" . $curriculo->getLinkedIn() . "', objetivo = '" . $curriculo->getObjetivo() . "', formacaoAcademica = '" . $curriculo->getFormacaoAcademica() . "', expProfissionaisRelevantes = '" . $curriculo->getExpProfissionaisRelevantes() . "', especialidade = '" . $curriculo->getEspecialidade() . "' WHERE nome = " . $curriculo->getCurriculoNome();
         return $connection->query($alterarUsuario);
     }
 
-    function consultarCurriculo($curriculoNome, $connection)
+    function consultarUsuario($curriculoNome, $connection)
     {
-        $consultarCurriculo = "SELECT * FROM Curriculo WHERE nome = '" . $curriculoNome . "'";
+        $consultarCurriculo = "SELECT * FROM Curriculo WHERE nome = " . $curriculoNome;
         $curriculo = $connection->query($consultarCurriculo);
         return $curriculo;
-    }
-
-    function consultarTodosCurriculos($connection)
-    {
-        $consultarCurriculo = "SELECT * FROM Curriculo";
-        $curriculos = $connection->query($consultarCurriculo);
-        return $curriculos;
     }
 
 }
