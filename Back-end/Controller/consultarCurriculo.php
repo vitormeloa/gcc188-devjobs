@@ -23,7 +23,7 @@ echo "<!DOCTYPE html>
         <title>Perfil|DevJobs</title>
         <link rel='stylesheet' href='../css/estilo.css'>
     </head>
-
+    
     <body>
         <header id='header'>
             <nav class='container'>

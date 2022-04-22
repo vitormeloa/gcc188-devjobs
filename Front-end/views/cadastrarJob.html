@@ -1,30 +1,32 @@
 <!DOCTYPE html>
 
 <html lang="pt-BR">
-
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Cadastre-se</title>
+        <title>Cadastrar Currículo</title>
         <link rel="stylesheet" href="../css/estilo.css">
     </head>
-    
+
     <body>
+
         <header id="header">
+            
             <nav class="container">
                 <a class="logo" href="#">Dev<span>Jobs</span></a>
             </nav>
+
         </header>
-            
+        
         <main>
 
-            <div class="loginBox">
+            <div class = "loginBox">
 
-                <section class="section">
+                <section class = "section">
 
-                    <div class="container grid">
+                    <div class = "container grid">
 
-                        <form action = "../../Back-end/Controller/cadastrarContratante.php" method = "POST" autocomplete="off">
+                        <form action = "../../Back-end/Controller/cadastrarCurriculo.php" method = "POST" autocomplete="off">
                             <br>
                             <br>
                             <br>
@@ -49,83 +51,77 @@
                             <br>
                             <br>
                             <br>
-                            <br><br><br><br>
-                            <br><br><br><br>
-                            <br><br><br><br>
-                            <br><br><br><br>
-                            <br><br><br><br>
-                            <br><br><br><br>
-                            <img src="../images/Cadastro.png" alt="" width=200 height=100>
-                                <h1>Cadastro Contratante</h1>
-                                <br>
-
+                            <h1>Cadastro Job</h1>
+                            <br>
                             <div class = "userBox">
-                                <label for = "cpf">*CPF:</label>
+                                <label for = "jobNome">Nome do Job:</label>
                                 <br>
-                                <input type = "text" name = "cpf" pattern = "\d{3}\.?\d{3}\.?\d{3}-?\d{2}">
+                                <br>
+                                <input type = "text" name = "jobNome" maxlength = "50" required>
                                 <br>
                             </div>
 
                             <div class = "userBox">
-                                <label for = "nome">*Nome Completo:</label>
+                                <label for = "qtdVagas">Quantidade de vagas:</label>
                                 <br>
-                                <input type = "text" name="nome">
+                                <br>
+                                <input type = "number" name = "qtdVagas" step = "1" min = "1" required>
                                 <br>
                             </div>
 
                             <div class = "userBox">
                                 <br>
-                                <label for = "email">*Email:</label>
+                                <label for = "descricao">Descrição:</label>
                                 <br>
-                                <input type = "email" name = "email">
-                                <br>
-                            </div>
-
-                            <div class = "userBox">
-                                <br>
-                                <label for = "senha">*Senha:</label>
-                                <br>
-                                <input type = "password" name = "senha">
-                                <br>
-                            </div>
-                            
-                            <div class = "userBox">
-                                <br>
-                                <label for = "telefone">Telefone</label>
-                                <br>
-                                <input type = "phone" name = "telefone">
+                                <input type = "url" name = "descricao" maxlength = "300" required>
                                 <br>
                             </div>
 
                             <div class = "userBox">
                                 <br>
-                                <label for = "dataNasc">*Data de Nascimento:</label>
+                                <label for = "requisitos">Requisitos:</label>
                                 <br>
-                                <input type = "date" name = "dataNasc">
+                                <input type = "url" name = "requisitos" maxlength = "200" required>
+                                <br>
+                            </div>
+                        
+                            <div class = "userBox">
+                                <br>
+                                <label for = "beneficios">Benefícios:</label>
+                                <br>
+                                <input type = "text" name = "beneficios" maxlength = "200" required>
                                 <br>
                             </div>
 
                             <div class = "userBox">
+                                <div class = "">
+                                    <br>
+                                    <label for = "remoto">Remoto:</label>
+                                    <br>
+                                    <select name="remoto" id = "remoto">
+                                        <option selected disable value = ""></option>
+                                        <option>Sim</option>
+                                        <option>Não</option>
+                                        <option>Híbrido</option>
+                                    </select>
+                                    <br>
+                                    <br>
+                                </div>
+                            </div>
+
+                            <div class="userBox">
                                 <br>
-                                <label for = "nomeEmpresa">*Nome da sua Empresa:</label>
+                                <label for="salario">Salário:</label>
                                 <br>
-                                <input type = "text" name = "nomeEmpresa">
+                                <input type="number" name="salario">
                                 <br>
                             </div>
 
-                            <div class = "userBox">
+                            <div class="userBox">
                                 <br>
-                                <label for = "cnpj">*CNPJ da Empresa:</label>
+                                <label for="cpfContratante">CPF do Contratante:</label>
                                 <br>
-                                <input type = "text" name = "cnpj" pattern = "\d{2}\.?\d{3}\.?\d{3}/?\d{4}-?\d{2}">
-                                <br>
-                            </div>
-
-                            <div class = "userBox">
-                                <br>
-                                <label for = "dataAberturaEmpresa">*Data de Abertura da Empresa:</label>
-                                <br>
-                                <input type = "date" name = "dataAberturaEmpresa">
+                                <input type="text" name="cpfContratante" pattern = "\d{3}\.?\d{3}\.?\d{3}-?\d{2}">
                                 <br>
                             </div>
 
@@ -141,7 +137,7 @@
 
                             <div class = "userBox">
                                 <br>
-                                <a href = "../../index.html" class = "button" type = "button">Voltar</a>
+                                <a href = "curriculosFuncionario.html" class = "button" type = "button">Voltar</a>
                             </div>
 
                         </form>
