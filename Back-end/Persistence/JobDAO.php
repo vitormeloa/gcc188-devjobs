@@ -49,9 +49,9 @@ class jobDAO
         return $job;
     }
 
-    function consultarTodosJobs($connection)
+    function consultarTodosJobs($cpf, $connection)
     {
-        $consultarJobs = "SELECT * FROM Jobs";
+        $consultarJobs = "SELECT * FROM Jobs WHERE cpfContratante = '" . $cpf . "'";
         $jobs = $connection->query($consultarJobs);
         return $jobs;
     }

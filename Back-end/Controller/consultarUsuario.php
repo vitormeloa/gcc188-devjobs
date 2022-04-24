@@ -58,7 +58,7 @@ if($user['funcionarioOrContratante'] == 'F')
                             <br>
                             <br>
                             <br>
-                            <br>
+                            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
                             <h2>Perfil</h2>
 
                             <div class = 'userBox'>
@@ -115,7 +115,7 @@ if($user['funcionarioOrContratante'] == 'F')
 
                             <div class = 'userBox'>
                                 <br>
-                                <button class='button' type='submit'>Alterar Dados</button>
+                                <button class='button' type='submit'>Alterar Perfil</button>
                                 <br>
                                 <a href = '../../Front-end/views/excluirUsuario.html' class = 'button' type = 'button'>Excluir Conta</a>
                             </div>
@@ -178,7 +178,7 @@ else
                             <br>
                             <br>
                             <br>
-                            <br>
+                            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
                             <h2>Perfil</h2>
 
                             <div class = 'userBox'>
@@ -262,7 +262,7 @@ else
 
                             <div class = 'userBox'>
                                 <br>
-                                <button class = 'button' type = 'submit'>Alterar Dados</button>
+                                <button class = 'button' type = 'submit'>Alterar Perfil</button>
                                 <br>
                                 <a href = '../../Front-end/views/excluirUsuario.html' class = 'button' type = 'button'>Excluir Conta</a>
                             </div>
