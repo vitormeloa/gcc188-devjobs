@@ -21,64 +21,27 @@
         <main>
 
             <div class = "loginBox">
-
+                <div class="curriculoBox">
                 <section class = "section">
 
                     <div class = "container grid">
 
                         <form action = "../../Back-end/Controller/cadastrarCurriculo.php" method = "POST" autocomplete="off">
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>        
-                            <br>
-                            <br>
-                            <br>
-                            <br>
+
                             <h1>Cadastro Currículo</h1>
                             <br>
                             
                             <div class = "userBox">
                                 <label for = "cidadeOrigem">*Cidade de Origem:</label>
                                 <br>
-                                <input type = "text" name = "cidadeOrigem" maxlength = "50" required>
+                                <input type = "text" name = "cidadeOrigem" maxlength = "50" oninvalid = "this.setCustomValidity('A cidade de origem deve ter no máximo 50 caracteres!')" oninput = "this.setCustomValidity('')" required>
                                 <br>
                             </div>
 
                             <div class = "userBox">
                                 <label for = "estadoOrigem">*Estado de Origem:</label>
                                 <br>
-                                <input type = "text" name = "estadoOrigem" placeholder = "Entre apenas com a sigla. Ex: MG" required>
+                                <input type = "text" name = "estadoOrigem" placeholder = "Entre apenas com a sigla. Ex: MG" oninvalid = "this.setCustomValidity('Apenas a sigla o estado será válida!')" oninput = "this.setCustomValidity('')" required>
                                 <br>
                             </div>
 
@@ -86,7 +49,7 @@
                                 <br>
                                 <label for = "github">*Github:</label>
                                 <br>
-                                <input type = "url" name = "github" required>
+                                <input type = "url" name = "github" oninvalid = "this.setCustomValidity('O GitHub deve ser válido!')" oninput = "this.setCustomValidity('')" required>
                                 <br>
                             </div>
 
@@ -94,7 +57,7 @@
                                 <br>
                                 <label for = "linkedIn">*LinkedIn:</label>
                                 <br>
-                                <input type = "url" name = "linkedIn" required>
+                                <input type = "url" name = "linkedIn" oninvalid = "this.setCustomValidity('O LinkedIn deve ser válido!')" oninput = "this.setCustomValidity('')" required>
                                 <br>
                             </div>
                         
@@ -102,7 +65,7 @@
                                 <br>
                                 <label for = "objetivo">*Objetivo:</label>
                                 <br>
-                                <input type = "text" name = "objetivo" maxlength = "200" required>
+                                <textarea name="objetivo"  cols = "32" rows="8" maxlength="200" required></textarea>
                                 <br>
                             </div>
 
@@ -110,15 +73,16 @@
                                 <br>
                                 <label for = "formacaoAcademica">*Formação Acadêmica:</label>
                                 <br>
-                                <input type = "text" name = "formacaoAcademica" maxlength = "150" required>
+                                <textarea name="formacaoAcademica"  cols = "32" rows="8" maxlength="150" required></textarea>
                                 <br>
                             </div>
 
                             <div class = "userBox">
                                 <br>
-                                <label for = "expProfissionaisRelevantes">Experiências Profissionais Relevantes:</label>
+                                <label for = "expProfissionaisRelevantes">Experiências profissionais relevantes:</label>
                                 <br>
-                                <input type = "text" name = "expProfissionaisRelevantes" maxlength = "300">
+                                <br>
+                                <textarea name="expProfissionaisRelevantes"  cols = "32" rows="8" maxlength="300" required></textarea>
                                 <br>
                             </div>
 
@@ -126,7 +90,7 @@
                                 <br>
                                 <label for = "especialidade">Especialidade:</label>
                                 <br>
-                                <input type = "text" name = "especialidade" maxlength = "30">
+                                <textarea name="especialidade"  cols = "32" rows="8" maxlength="30" required></textarea>
                                 <br>
                             </div>
 
@@ -134,7 +98,7 @@
                                 <br>
                                 <label for = "cpf">*Informe seu CPF:</label>
                                 <br>
-                                <input type = "text" name = "cpf" required>
+                                <input type = "text" name = "cpf" oninvalid = "this.setCustomValidity('O CPF deve ser válido!')" oninput = "this.setCustomValidity('')" required>
                                 <br>
                             </div>
 
@@ -142,7 +106,7 @@
                                 <br>
                                 <label for = "curriculoNome">*Nome do Currículo:</label>
                                 <br>
-                                <input type = "text" name = "curriculoNome" maxlength = "50" placeholder = "Dê um nome único :D" required>
+                                <input type = "text" name = "curriculoNome" maxlength = "50" placeholder = "Dê um nome único :D" oninvalid = "this.setCustomValidity('O nome deve ter no máximo 50 caracteres!')" oninput = "this.setCustomValidity('')" required>
                                 <br>
                             </div>
 
@@ -166,7 +130,7 @@
                     </div>
 
                 </section>
-
+            </div>
             </div>
 
         </main>

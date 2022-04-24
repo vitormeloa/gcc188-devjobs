@@ -23,19 +23,26 @@
 
                 <div class="container grid">
 
-                    <form action = "../../Back-end/Controller/excluirUsuario.php" method = "POST" autocomplete = "off">
+                    <form action = "#" method = "POST" autocomplete = "off">
                         <br>
                         <br>
-                        <h1>Solicitações Recebidas</h1>
-
-                        <br>
-                        <p>Informe abaixo seu CPF.</p>
+                        <h1>Aplicar Currículo</h1>
+                        <p>Informe o currículo que você deseja usar para aplicar sua candidatura a esta vaga:</p>
                         <br>
 
                         <div class="userBox">
-                            <label for = "cpf">CPF:</label>
+                            <label for = "curriculoNome">Nome do Currículo:</label>
                             <br>
-                            <input type = "text" name = "cpf" pattern = "\d{3}\.?\d{3}\.?\d{3}-?\d{2}">
+                            <br>
+                            <input type = "text" name = "curriculoNome">
+                            <br>
+                        </div>
+
+                        <div class="userBox">
+                            <label for = "curriculoNome">Motivo:</label>
+                            <br>
+                            <br>
+                            <textarea name = "curriculoNome"></textarea>
                             <br>
                         </div>
 

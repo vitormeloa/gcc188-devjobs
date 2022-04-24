@@ -62,14 +62,14 @@
                             <div class = "userBox">
                                 <label for = "cpf">*CPF:</label>
                                 <br>
-                                <input type = "text" name = "cpf" pattern = "\d{3}\.?\d{3}\.?\d{3}-?\d{2}">
+                                <input type = "text" name = "cpf" pattern = "\d{3}\.?\d{3}\.?\d{3}-?\d{2}" oninvalid = "this.setCustomValidity('O CPF deve ser válido!')" oninput = "this.setCustomValidity('')">
                                 <br>
                             </div>
 
                             <div class = "userBox">
                                 <label for = "nome">*Nome Completo:</label>
                                 <br>
-                                <input type = "text" name="nome">
+                                <input type = "text" name="nome" oninvalid = "this.setCustomValidity('O nome deve ter no máximo 50 caracteres!')" oninput = "this.setCustomValidity('')">
                                 <br>
                             </div>
 
@@ -77,7 +77,7 @@
                                 <br>
                                 <label for = "email">*Email:</label>
                                 <br>
-                                <input type = "email" name = "email">
+                                <input type = "email" name = "email" oninvalid = "this.setCustomValidity('O email deve ser válido!')" oninput = "this.setCustomValidity('')">
                                 <br>
                             </div>
 
@@ -85,7 +85,7 @@
                                 <br>
                                 <label for = "senha">*Senha:</label>
                                 <br>
-                                <input type = "password" name = "senha">
+                                <input type = "password" name = "senha" oninvalid = "this.setCustomValidity('A senha deve ter no mínimo 8 caracteres!')" oninput = "this.setCustomValidity('')">
                                 <br>
                             </div>
                             
@@ -93,7 +93,7 @@
                                 <br>
                                 <label for = "telefone">Telefone</label>
                                 <br>
-                                <input type = "phone" name = "telefone">
+                                <input type = "phone" name = "telefone" oninvalid = "this.setCustomValidity('O telefone deve ser válido!')" oninput = "this.setCustomValidity('')">
                                 <br>
                             </div>
 
@@ -101,7 +101,7 @@
                                 <br>
                                 <label for = "dataNasc">*Data de Nascimento:</label>
                                 <br>
-                                <input type = "date" name = "dataNasc">
+                                <input type = "date" name = "dataNasc" oninvalid = "this.setCustomValidity('A data de nascimento deve ser válida!')" oninput = "this.setCustomValidity('')">
                                 <br>
                             </div>
 
@@ -109,7 +109,7 @@
                                 <br>
                                 <label for = "nomeEmpresa">*Nome da sua Empresa:</label>
                                 <br>
-                                <input type = "text" name = "nomeEmpresa">
+                                <input type = "text" name = "nomeEmpresa" oninvalid = "this.setCustomValidity('O CPF deve ser válido!')" oninput = "this.setCustomValidity('')">
                                 <br>
                             </div>
 
@@ -117,7 +117,7 @@
                                 <br>
                                 <label for = "cnpj">*CNPJ da Empresa:</label>
                                 <br>
-                                <input type = "text" name = "cnpj" pattern = "\d{2}\.?\d{3}\.?\d{3}/?\d{4}-?\d{2}">
+                                <input type = "text" name = "cnpj" pattern = "\d{2}\.?\d{3}\.?\d{3}/?\d{4}-?\d{2}" oninvalid = "this.setCustomValidity('O CNPJ deve ser válido!')" oninput = "this.setCustomValidity('')">
                                 <br>
                             </div>
 
@@ -125,7 +125,7 @@
                                 <br>
                                 <label for = "dataAberturaEmpresa">*Data de Abertura da Empresa:</label>
                                 <br>
-                                <input type = "date" name = "dataAberturaEmpresa">
+                                <input type = "date" name = "dataAberturaEmpresa" oninvalid = "this.setCustomValidity('A data deve ser válida!')" oninput = "this.setCustomValidity('')">
                                 <br>
                             </div>
 
