@@ -1,17 +1,17 @@
 <?php
 
 include_once '../Persistence/Connection.php';
-include_once '../Persistence/CurriculoDAO.php';
+include_once '../Persistence/AplicacaoDAO.php';
 
-$curriculoNome = $_POST['curriculoNome'];
+$aplicacaoNome = $_POST['aplicacaoNome'];
 
 $connection = new Connection();
 $connection = $connection->getConnection();
 
-$curriculoDAO = new CurriculoDAO();
-$curriculo = $curriculoDAO->consultarCurriculo($curriculoNome, $connection);
+$aplicacaoDAO = new AplicacaoDAO();
+$aplicacao = $aplicacaoDAO->consultarAplicacao($aplicacaoNome, $connection);
 
-$curriculo = $curriculo->fetch_assoc();
+$aplicacao = $aplicacao->fetch_assoc();
 echo
 "<!DOCTYPE html>
 
@@ -19,7 +19,7 @@ echo
     <head>
         <meta charset='UTF-8'>
         <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-        <title>Currículo</title>
+        <title>Aplicação</title>
         <link rel='stylesheet' href='../../Front-end/css/estilo.css'>
     </head>
 
@@ -41,7 +41,7 @@ echo
 
                     <div class = 'container grid'>
 
-                        <form action = 'alterarCurriculo.php' method = 'POST' autocomplete='off'>
+                        <form action = 'alterarAplicacao.php' method = 'POST' autocomplete='off'>
                             <br>
                             <br>
                             <br>
@@ -80,79 +80,81 @@ echo
                             <br>
                             <br>
                             <br>
-                            <h1>Alterar Currículo</h1>
+                            <h1>Alterar Aplicação</h1>
                             <br>
                             
                             <div class = 'userBox'>
-                                <label for = 'cidadeOrigem'>Cidade de Origem:</label>
+                                <label for = 'data'>Data da Aplicação:</label>
                                 <br>
-                                <input type = 'text' name = 'cidadeOrigem' value = '" . $curriculo['cidadeOrigem'] . "' hidden>
-                                <input type = 'text' name = 'cidadeOrigem' value = '" . $curriculo['cidadeOrigem'] . "' disabled>
-                                <br>
-                            </div>
-
-                            <div class = 'userBox'>
-                                <label for = 'estadoOrigem'>Estado de Origem:</label>
-                                <br>
-                                <input type = 'text' name = 'estadoOrigem' value = '" . $curriculo['estadoOrigem'] . "' hidden>
-                                <input type = 'text' name = 'estadoOrigem' value = '" . $curriculo['estadoOrigem'] . "' disabled>
+                                <input type = 'text' name = 'data' value = '" . $aplicacao['data'] . "' hidden>
+                                <input type = 'text' name = 'data' value = '" . $aplicacao['data'] . "' disabled>
                                 <br>
                             </div>
 
                             <div class = 'userBox'>
+                                <label for = 'hora'>Hora da Aplicação:</label>
                                 <br>
-                                <label for = 'github'>Github:</label>
-                                <br>
-                                <input type = 'url' name = 'github' placeholder = 'Entre com o link do seu perfil' value = '" . $curriculo['github'] . "'>
+                                <input type = 'text' name = 'hora' value = '" . $aplicacao['hora'] . "' hidden>
+                                <input type = 'text' name = 'hora' value = '" . $aplicacao['hora'] . "' disabled>
                                 <br>
                             </div>
 
                             <div class = 'userBox'>
                                 <br>
-                                <label for = 'linkedIn'>LinkedIn:</label>
+                                <label for = 'motivo'>Motivo:</label>
                                 <br>
-                                <input type = 'url' name = 'linkedIn' placeholder = 'Entre com o link do seu perfil' value = '" . $curriculo['linkedIn'] . "'>
+                                <input type = 'textarea' maxlength = '100' name = 'motivo' placeholder = 'Pequena descricao sobre o motivo da aplicacao!' value = '" . $aplicacao['motivo'] . "'>
+                                <br>
+                            </div>
+
+                            <div class = 'userBox'>
+                                <br>
+                                <label for = 'situacao'>Situação:</label>
+                                <br>
+                                <input type = 'text' name = 'situacao' value = '" . $aplicacao['situacao'] . "' hidden>
+                                <input type = 'text' name = 'situacao' value = '" . $aplicacao['situacao'] . "' disabled>
                                 <br>
                             </div>
                         
                             <div class = 'userBox'>
                                 <br>
-                                <label for = 'objetivo'>Objetivo:</label>
+                                <label for = 'curriculoNome'>Nome do Currículo Aplicado:</label>
                                 <br>
-                                <input type = 'textarea' name = 'objetivo' maxlength = '200' value = '" . $curriculo['objetivo'] . "'>
-                                <br>
-                            </div>
-
-                            <div class = 'userBox'>
-                                <br>
-                                <label for = 'formacaoAcademica'>Formação Acadêmica:</label>
-                                <br>
-                                <input type = 'textarea' name = 'formacaoAcademica' maxlength = '150' value = '" . $curriculo['formacaoAcademica'] . "'>
+                                <input type = 'text' name = 'curriculoNome' value = '" . $aplicacao['curriculoNome'] . "'>
                                 <br>
                             </div>
 
                             <div class = 'userBox'>
                                 <br>
-                                <label for = 'expProfissionaisRelevantes'>Experiências Profissionais Relevantes:</label>
+                                <label for = 'jobNome'>Nome do Job Aplicado:</label>
                                 <br>
-                                <input type = 'textarea' name = 'expProfissionaisRelevantes' maxlength = '300' value = '" . $curriculo['expProfissionaisRelevantes'] . "'>
-                                <br>
-                            </div>
-
-                            <div class = 'userBox'>
-                                <br>
-                                <label for = 'especialidade'>Especialidade:</label>
-                                <br>
-                                <input type = 'textarea' name = 'especialidade' maxlength = '30' value = '" . $curriculo['especialidade'] . "'>
+                                <input type = 'text' name = 'jobNome' value = '" . $aplicacao['jobNome'] . "' hidden>
+                                <input type = 'text' name = 'jobNome' value = '" . $aplicacao['jobNome'] . "' disabled>
                                 <br>
                             </div>
 
                             <div class = 'userBox'>
                                 <br>
-                                <label for = 'curriculoNome'>Nome do Currículo:</label>
+                                <label for = 'aplicacaoNome'>Nome da Aplicação:</label>
                                 <br>
-                                <input type = 'text' name = 'curriculoNome' value = '" . $curriculo['nome'] . "' hidden>
-                                <input type = 'text' name = 'curriculoNome' value = '" . $curriculo['nome'] . "' disabled>
+                                <input type = 'text' name = 'aplicacaoNome' value = '" . $aplicacao['aplicacaoNome'] . "' hidden>
+                                <input type = 'text' name = 'aplicacaoNome' value = '" . $aplicacao['aplicacaoNome'] . "' disabled>
+                                <br>
+                            </div>
+
+                            <div class = 'userBox'>
+                                <br>
+                                <label for = 'cpfFuncionario'></label>
+                                <br>
+                                <input type = 'text' name = 'cpfFuncionario' value = '" . $aplicacao['cpfFuncionario'] . "' hidden>
+                                <br>
+                            </div>
+
+                            <div class = 'userBox'>
+                                <br>
+                                <label for = 'cpfContratante'></label>
+                                <br>
+                                <input type = 'text' name = 'cpfContratante' value = '" . $aplicacao['cpfContratante'] . "' hidden>
                                 <br>
                             </div>
 
@@ -168,7 +170,7 @@ echo
 
                             <div class = 'userBox'>
                                 <br>
-                                <a href = '../../Front-end/views/curriculosFuncionario.html' class = 'button' type = 'button'>Voltar</a>
+                                <a href = '../../Front-end/views/aplicacoesFuncionario.html' class = 'button' type = 'button'>Voltar</a>
                             </div>
 
                         </form>

@@ -3,52 +3,68 @@
 <html lang="pt-BR">
 
     <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Excluir Usuário</title>
-        <link rel="stylesheet" href="../css/estilo.css">
+        <meta charset = "UTF-8">
+        <meta http-equiv = "X-UA-Compatible" content="IE=edge">
+        <meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
+        <title>Aplicacao Job</title>
+        <link rel = "stylesheet" href = "../css/estilo.css">
     </head>
 
     <body>
-        <header id="header">
-            <nav class="container">
-                <a class="logo" href="#">Dev<span>Jobs</span></a>
+        <header id = "header">
+            <nav class = "container">
+                <a class = "logo" href = "#">Dev<span>Jobs</span></a>
             </nav>
         </header>
 
-        <div class="loginBox">
+        <div class = "loginBox">
 
-            <section class="section">
+            <section class = "section">
 
-                <div class="container grid">
+                <div class = "container grid">
 
-                    <form action = "#" method = "POST" autocomplete = "off">
+                    <form action = "../../Back-end/Controller/cadastrarAplicacao.php" method = "POST" autocomplete = "off">
                         <br>
                         <br>
                         <h1>Aplicar Currículo</h1>
                         <p>Informe o currículo que você deseja usar para aplicar sua candidatura a esta vaga:</p>
                         <br>
 
-                        <div class="userBox">
-                            <label for = "curriculoNome">Nome do Currículo:</label>
+                        <div class = "userBox">
+                            <label for = "curriculoNome">*Nome do Currículo:</label>
                             <br>
                             <br>
-                            <input type = "text" name = "curriculoNome">
+                            <input type = "text" name = "curriculoNome" placeholder = "Mesmo nome usado no cadastro do currículo" required>
                             <br>
                         </div>
 
-                        <div class="userBox">
-                            <label for = "curriculoNome">Motivo:</label>
+                        <div class = "userBox">
+                            <label for = "motivo">Motivo:</label>
                             <br>
                             <br>
-                            <textarea name = "curriculoNome"></textarea>
+                            <textarea name = "motivo" maxlength = "100" placeholder = "Pequena descricao sobre o motivo da aplicacao!"></textarea>
+                            <br>
+                        </div>
+
+                        <div class = "userBox">
+                            <label for = "aplicacaoNome">*Nome da Aplicação:</label>
+                            <br>
+                            <br>
+                            <input type = "text" name = "aplicacaoNome" placeholder = "Dê um nome único :D" required>
+                            <br>
+                        </div>
+
+                        <div class = "userBox">
+                            <label for = "cpfContratante">*CPF contratante:</label>
+                            <br>
+                            <br>
+                            <input type = "text" name = "cpfContratante" required>
                             <br>
                         </div>
 
                         <div class = 'userBox'>
                             <br>
-                            <button class='button' type='submit'>Consultar</button>
+                            <button class = 'button' type = 'submit'>Aplicar</button>
                             <br>
                         </div>
 

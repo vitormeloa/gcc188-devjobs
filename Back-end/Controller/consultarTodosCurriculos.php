@@ -1,9 +1,11 @@
 <?php
 
+session_start();
+
 include_once '../Persistence/Connection.php';
 include_once '../Persistence/CurriculoDAO.php';
 
-$cpf = $_POST['cpf'];
+$cpf = $_SESSION['cpf'];
 
 $connection = new Connection();
 $connection = $connection->getConnection();
@@ -52,7 +54,7 @@ if($todosCurriculos->num_rows > 0)
     {
         echo
         "<tr>
-            <td>" . $curriculo['nome'] . "</td>
+            <td>" . $curriculo['curriculoNome'] . "</td>
             <td>" . $curriculo['cidadeOrigem'] . "</td>
             <td>" . $curriculo['estadoOrigem'] . "</td>
             <td>" . $curriculo['github'] . "</td>
@@ -74,6 +76,10 @@ if($todosCurriculos->num_rows > 0)
     </body>
 
     </html>";
+}
+else
+{
+    echo "Nenhum Currículo Cadastrado";
 }
 
 ?>

@@ -21,12 +21,12 @@ $usuarioDAO = new UsuarioDAO();
 if($usuarioDAO->alterarUsuario($funcionario, $connection))
 {
     echo "Usuário alterado com sucesso!";
-    header("Location: ../../Front-end/views/mostrarPerfil.html");
+    header("Location: consultarUsuario.php");
 }
 else
 {
     echo "Erro na alteração dos dados!" . $connection->error();
-    header("Location: ../../Front-end/views/mostrarPerfil.html");
+    header("Location: consultarUsuario.php");
 }
 
 

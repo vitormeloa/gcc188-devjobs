@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 
 <html lang="pt-BR">
@@ -13,30 +17,33 @@
     <body>
         <main>
 
-            <header id="header">
-                <nav class="container">
-                    <a class="logo" href="#">Dev<span>Jobs</span></a>
+            <header id = "header">
+                <nav class = "container">
+                    <a class = "logo" href="#">Dev<span>Jobs</span></a>
                 </nav>
             </header>
 
-                <div class="loginBox">
+                <div class = "loginBox">
 
-                    <section class="section">
+                    <section class = "section">
 
-                        <div class="container grid">
+                        <div class = "container grid">
 
                             <form>
                                 
-                                <div class="buttons">
+                                <div class = "buttons">
                                     <h1>Home|DevJobs</h1> 
-                                    <a href="mostrarPerfil.html" class="button" type="button">Perfil</a>
+                                    <a href = "../../Back-end/Controller/consultarUsuario.php" class = "button" type = "button">Perfil</a>
                                     <!--Botao de Contratante-->
                                     <br>
-                                    <a href="jobsContratante.html" class="button" type="button">Jobs</a>
                                     <br>
-                                    <a href="solicitacoesRecebidasContratante.html" class="button" type="button">Solicitações Recebidas</a>
+                                    <a href = "jobsContratante.html" class = "button" type = "button">Jobs</a>
                                     <br>
-                                    <a href="../../index.html" class="button" type="button">Sair</a>
+                                    <br>
+                                    <a href = "../../Back-end/Controller/consultarTodasAplicacoesContratante.php" class = "button" type = "button">Solicitações Recebidas</a>
+                                    <br>
+                                    <br>
+                                    <a href = "../../index.html" class = "button" type = "button">Sair</a>
                                 </div>
 
                             </form>

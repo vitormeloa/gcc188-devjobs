@@ -1,9 +1,11 @@
 <?php
 
+session_start();
+
 include_once '../Persistence/Connection.php';
 include_once '../Persistence/JobDAO.php';
 
-$cpf = $_POST['cpf'];
+$cpf = $_SESSION['cpf'];
 
 $connection = new Connection();
 $connection = $connection->getConnection();
@@ -50,7 +52,7 @@ if($todosJobs->num_rows > 0)
     {
         echo
         "<tr>
-            <td>" . $job['nome'] . "</td>
+            <td>" . $job['jobNome'] . "</td>
             <td>" . $job['qtdVagas'] . "</td>
             <td>" . $job['descricao'] . "</td>
             <td>" . $job['requisitos'] . "</td>
@@ -70,6 +72,10 @@ if($todosJobs->num_rows > 0)
     </body>
 
     </html>";
+}
+else
+{
+    echo "Nenhum Job Cadastrado";
 }
 
 ?>

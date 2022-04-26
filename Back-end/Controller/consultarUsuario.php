@@ -1,11 +1,13 @@
 <?php
 
+session_start();
+
 include_once '../Persistence/Connection.php';
 include_once '../Model/Usuario.php';
 include_once '../Persistence/UsuarioDAO.php';
 include_once '../Persistence/ContratanteDAO.php';
 
-$cpf = $_POST['cpf'];
+$cpf = $_SESSION['cpf'];
 
 $connection = new Connection();
 $connection = $connection->getConnection();
@@ -46,19 +48,9 @@ if($user['funcionarioOrContratante'] == 'F')
                     <div class='container grid'>
 
                         <form action = 'alterarFuncionario.php' method = 'POST'>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+                            <br><br><br><br><br><br><br><br><br><br><br><br>
+                            
                             <h2>Perfil</h2>
 
                             <div class = 'userBox'>

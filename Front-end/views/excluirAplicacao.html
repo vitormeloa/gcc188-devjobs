@@ -6,7 +6,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Excluir Job</title>
+        <title>Excluir Aplicação</title>
         <link rel="stylesheet" href="../css/estilo.css">
     </head>
 
@@ -23,24 +23,24 @@
 
                 <div class="container grid">
 
-                    <form action = "../../Back-end/Controller/excluirJob.php" method = "POST" autocomplete = "off">
+                    <form action = "../../Back-end/Controller/excluirAplicacao.php" method = "POST" autocomplete = "off">
                         <br>
                         <br>
-                        <h1>Excluir Job</h1>
-                        <p>Se deseja realmente excluir esse job, informe abaixo que se refere ao Job.</p>
+                        <h1>Excluir Aplicação</h1>
+                        <p>Digite o nome da aplicação que deseja excluir, exatamente igual ao nome dado no cadastramento:</p>
                         <br>
 
                         <div class="userBox">
-                            <label for = "jobNome">Nome do Job:</label>
+                            <label for = "aplicacaoNome">Nome da Aplicação:</label>
                             <br>
                             <br>
-                            <input type = "text" name = "jobNome">
+                            <input type = "text" name = "aplicacaoNome">
                             <br>
                         </div>
 
                         <div class = 'userBox'>
                             <br>
-                            <button class='button' type='submit'>Excluir Job</button>
+                            <button class='button' type='submit'>Excluir</button>
                             <br>
                         </div>
 

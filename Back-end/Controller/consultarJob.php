@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 include_once '../Persistence/Connection.php';
 include_once '../Persistence/JobDAO.php';
 
@@ -45,8 +47,8 @@ echo "<!DOCTYPE html>
                         <div class = 'userBox'>
                             <label for = 'jobNome'>Nome do Job:</label>
                             <br>
-                            <input type = 'text' name = 'jobNome' maxlength = '50' value = '" . $job['nome'] . "' hidden>
-                            <input type = 'text' name = 'jobNome' maxlength = '50' value = '" . $job['nome'] . "' disabled>
+                            <input type = 'text' name = 'jobNome' maxlength = '50' value = '" . $job['jobNome'] . "' hidden>
+                            <input type = 'text' name = 'jobNome' maxlength = '50' value = '" . $job['jobNome'] . "' disabled>
                             <br>
                         </div>
 

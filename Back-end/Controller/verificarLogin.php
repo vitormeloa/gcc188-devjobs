@@ -1,10 +1,14 @@
 <?php
 
+session_start();
+
 include_once '../Persistence/UsuarioDAO.php';
 include_once '../Persistence/Connection.php';
 
 $cpf = $_POST['cpf'];
+$_SESSION['cpf'] = $cpf;
 $senha = $_POST['senha'];
+$_SESSION['senha'] = $senha;
 
 $connection = new Connection();
 $connection = $connection->getConnection();
