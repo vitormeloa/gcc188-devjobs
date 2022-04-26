@@ -1,154 +1,131 @@
 <!DOCTYPE html>
 
-<html lang="pt-BR">
+<html lang = "pt-BR">
 
     <head>
-        <meta charset="UTF-8">
+        <meta charset = "UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Cadastre-se</title>
-        <link rel="stylesheet" href="../css/estilo.css">
+        <link rel = "stylesheet" href = "../css/estilo.css">
     </head>
     
     <body>
-        <header id="header">
-            <nav class="container">
-                <a class="logo" href="#">Dev<span>Jobs</span></a>
+        <header id = "header">
+
+            <nav class = "container">
+                <a class = "logo" href="#">Dev<span>Jobs</span></a>
             </nav>
+
         </header>
             
         <main>
 
-            <div class="loginBox">
+            <div class = "loginBox">
 
-                <section class="section">
+                <div class = "curriculoBox">
 
-                    <div class="container grid">
+                    <section class="section">
 
-                        <form action = "../../Back-end/Controller/cadastrarContratante.php" method = "POST" autocomplete="off">
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br><br><br><br>
-                            <br><br><br><br>
-                            <br><br><br><br>
-                            <br><br><br><br>
-                            <br><br><br><br>
-                            <br><br><br><br>
-                            <img src="../images/Cadastro.png" alt="" width=200 height=100>
+                        <div class = "container grid">
+
+                            <form action = "../../Back-end/Controller/cadastrarContratante.php" method = "POST" autocomplete="off">
+
+                                <img src = "../images/Cadastro.png" alt = "" width = 200 height = 100>
                                 <h1>Cadastro Contratante</h1>
                                 <br>
 
-                            <div class = "userBox">
-                                <label for = "cpf">*CPF:</label>
-                                <br>
-                                <input type = "text" name = "cpf" pattern = "\d{3}\.?\d{3}\.?\d{3}-?\d{2}">
-                                <br>
-                            </div>
+                                <div class = "userBox">
+                                    <label for = "cpf">*CPF:</label>
+                                    <br>
+                                    <input type = "text" name = "cpf" pattern = "\d{3}\.?\d{3}\.?\d{3}-?\d{2}" oninvalid = "this.setCustomValidity('O CPF deve ser válido!')" oninput = "this.setCustomValidity('')" required>
+                                    <br>
+                                </div>
 
-                            <div class = "userBox">
-                                <label for = "nome">*Nome Completo:</label>
-                                <br>
-                                <input type = "text" name="nome">
-                                <br>
-                            </div>
+                                <div class = "userBox">
+                                    <label for = "nome">*Nome Completo:</label>
+                                    <br>
+                                    <input type = "text" name="nome" oninvalid = "this.setCustomValidity('O nome deve ter no máximo 50 caracteres!')" oninput = "this.setCustomValidity('')" required>
+                                    <br>
+                                </div>
 
-                            <div class = "userBox">
-                                <br>
-                                <label for = "email">*Email:</label>
-                                <br>
-                                <input type = "email" name = "email">
-                                <br>
-                            </div>
+                                <div class = "userBox">
+                                    <br>
+                                    <label for = "email">*Email:</label>
+                                    <br>
+                                    <input type = "email" name = "email" oninvalid = "this.setCustomValidity('O email deve ser válido!')" oninput = "this.setCustomValidity('')" required>
+                                    <br>
+                                </div>
 
-                            <div class = "userBox">
-                                <br>
-                                <label for = "senha">*Senha:</label>
-                                <br>
-                                <input type = "password" name = "senha">
-                                <br>
-                            </div>
-                            
-                            <div class = "userBox">
-                                <br>
-                                <label for = "telefone">Telefone</label>
-                                <br>
-                                <input type = "phone" name = "telefone">
-                                <br>
-                            </div>
+                                <div class = "userBox">
+                                    <br>
+                                    <label for = "senha">*Senha:</label>
+                                    <br>
+                                    <input type = "password" name = "senha" oninvalid = "this.setCustomValidity('A senha deve ter no mínimo 8 caracteres!')" oninput = "this.setCustomValidity('')" required>
+                                    <br>
+                                </div>
+                                
+                                <div class = "userBox">
+                                    <br>
+                                    <label for = "telefone">Telefone</label>
+                                    <br>
+                                    <input type = "phone" name = "telefone" oninvalid = "this.setCustomValidity('O telefone deve ser válido!')" oninput = "this.setCustomValidity('')">
+                                    <br>
+                                </div>
 
-                            <div class = "userBox">
-                                <br>
-                                <label for = "dataNasc">*Data de Nascimento:</label>
-                                <br>
-                                <input type = "date" name = "dataNasc">
-                                <br>
-                            </div>
+                                <div class = "userBox">
+                                    <br>
+                                    <label for = "dataNasc">*Data de Nascimento:</label>
+                                    <br>
+                                    <input type = "date" name = "dataNasc" oninvalid = "this.setCustomValidity('A data de nascimento deve ser válida!')" oninput = "this.setCustomValidity('')" required>
+                                    <br>
+                                </div>
 
-                            <div class = "userBox">
-                                <br>
-                                <label for = "nomeEmpresa">*Nome da sua Empresa:</label>
-                                <br>
-                                <input type = "text" name = "nomeEmpresa">
-                                <br>
-                            </div>
+                                <div class = "userBox">
+                                    <br>
+                                    <label for = "nomeEmpresa">*Nome da sua Empresa:</label>
+                                    <br>
+                                    <input type = "text" name = "nomeEmpresa" oninvalid = "this.setCustomValidity('O CPF deve ser válido!')" oninput = "this.setCustomValidity('')" required>
+                                    <br>
+                                </div>
 
-                            <div class = "userBox">
-                                <br>
-                                <label for = "cnpj">*CNPJ da Empresa:</label>
-                                <br>
-                                <input type = "text" name = "cnpj" pattern = "\d{2}\.?\d{3}\.?\d{3}/?\d{4}-?\d{2}">
-                                <br>
-                            </div>
+                                <div class = "userBox">
+                                    <br>
+                                    <label for = "cnpj">*CNPJ da Empresa:</label>
+                                    <br>
+                                    <input type = "text" name = "cnpj" pattern = "\d{2}\.?\d{3}\.?\d{3}/?\d{4}-?\d{2}" oninvalid = "this.setCustomValidity('O CNPJ deve ser válido!')" oninput = "this.setCustomValidity('')" required>
+                                    <br>
+                                </div>
 
-                            <div class = "userBox">
-                                <br>
-                                <label for = "dataAberturaEmpresa">*Data de Abertura da Empresa:</label>
-                                <br>
-                                <input type = "date" name = "dataAberturaEmpresa">
-                                <br>
-                            </div>
+                                <div class = "userBox">
+                                    <br>
+                                    <label for = "dataAberturaEmpresa">*Data de Abertura da Empresa:</label>
+                                    <br>
+                                    <input type = "date" name = "dataAberturaEmpresa" oninvalid = "this.setCustomValidity('A data deve ser válida!')" oninput = "this.setCustomValidity('')" required>
+                                    <br>
+                                </div>
 
-                            <div class = "userBox">
-                                <br>
-                                <button class = "button" type = "submit">Cadastrar</button>
-                            </div>
+                                <div class = "userBox">
+                                    <br>
+                                    <button class = "button" type = "submit">Cadastrar</button>
+                                </div>
 
-                            <div class = "userBox">
-                                <br>
-                                <button class = "button" type = "reset">Resetar Campos</button>
-                            </div>
+                                <div class = "userBox">
+                                    <br>
+                                    <button class = "button" type = "reset">Resetar Campos</button>
+                                </div>
 
-                            <div class = "userBox">
-                                <br>
-                                <a href = "../../index.html" class = "button" type = "button">Voltar</a>
-                            </div>
+                                <div class = "userBox">
+                                    <br>
+                                    <a href = "../../index.html" class = "button" type = "button">Voltar</a>
+                                </div>
 
-                        </form>
+                            </form>
 
-                    </div>
+                        </div>
 
-                </section>
+                    </section>
+
+                </div>
 
             </div>
 

@@ -1,17 +1,67 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Solicitações</title>
-</head>
-<body>
-    <header>
 
-    </header>
-    <main>
-        
-    </main>
-</body>
+<html lang="pt-BR">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Solicitações</title>
+        <link rel="stylesheet" href="../css/estilo.css">
+    </head>
+
+    <body>
+        <header id="header">
+
+            <nav class="container">
+                <a class="logo" href="#">Dev<span>Jobs</span></a>
+            </nav>
+            
+        </header>
+
+        <div class="loginBox">
+
+            <section class="section">
+
+                <div class="container grid">
+
+                    <form action = "../../Back-end/Controller/excluirUsuario.php" method = "POST" autocomplete = "off">
+                        <br>
+                        <br>
+                        <h1>Solicitações Recebidas</h1>
+
+                        <br>
+                        <p>Informe abaixo seu CPF.</p>
+                        <br>
+
+                        <div class="userBox">
+                            <label for = "cpf">CPF:</label>
+                            <br>
+                            <input type = "text" name = "cpf" pattern = "\d{3}\.?\d{3}\.?\d{3}-?\d{2}">
+                            <br>
+                        </div>
+
+                        <div class = 'userBox'>
+                            <br>
+                            <button class='button' type='submit'>Consultar</button>
+                            <br>
+                        </div>
+
+                        <div class = "userBox">
+                            <br>
+                            <a href = "paginaInicialContratante.html" class = "button" type = "button">Voltar</a>
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </section>
+
+        </div>
+
+        <img src="../images/image-background-green.jpeg">
+
+    </body>
+
 </html>

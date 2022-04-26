@@ -6,17 +6,17 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Consultar Job</title>
+        <title>Aplicar Currículo</title>
         <link rel="stylesheet" href="../css/estilo.css">
     </head>
 
     <body>
         <header id="header">
-
+            
             <nav class="container">
                 <a class="logo" href="#">Dev<span>Jobs</span></a>
             </nav>
-            
+
         </header>
 
         <div class="loginBox">
@@ -25,18 +25,26 @@
 
                 <div class="container grid">
 
-                    <form action = "../../Back-end/Controller/excluirUsuario.php" method = "POST" autocomplete = "off">
+                    <form action = "#" method = "POST" autocomplete = "off">
                         <br>
                         <br>
-                        <h1>Consultar Job</h1>
-                        <p>Informe o nome do Job que você deseja consultar.</p>
+                        <h1>Aplicar Currículo</h1>
+                        <p>Informe o currículo que você deseja usar para aplicar sua candidatura a esta vaga:</p>
                         <br>
 
                         <div class="userBox">
-                            <label for = "jobNome">Nome do Job:</label>
+                            <label for = "curriculoNome">Nome do Currículo:</label>
                             <br>
                             <br>
-                            <input type = "text" name = "jobNome">
+                            <input type = "text" name = "curriculoNome">
+                            <br>
+                        </div>
+
+                        <div class="userBox">
+                            <label for = "curriculoNome">Motivo:</label>
+                            <br>
+                            <br>
+                            <textarea name = "curriculoNome"></textarea>
                             <br>
                         </div>
 
@@ -50,7 +58,6 @@
                             <br>
                             <a href = "../../index.html" class = "button" type = "button">Voltar</a>
                         </div>
-                        
 
                     </form>
 

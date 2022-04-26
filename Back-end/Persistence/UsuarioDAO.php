@@ -9,8 +9,8 @@ class UsuarioDAO
         $inserirUsuario = "INSERT INTO Usuario(cpf, nome, email, senha, dataNasc, telefone, funcionarioOrContratante) VALUES ('" . $usuario->getCpf() . "','" . $usuario->getNome() . "','" . $usuario->getEmail() . "','" . $usuario->getSenha() . "','" . $usuario->getDataNasc() . "','" . $usuario->getTelefone() . "','" . $usuario->getFuncionarioOrContratante() . "')";
 
         if($connection->query($inserirUsuario) == TRUE)
-        {
-            echo "Usuário inserido com sucesso!";
+        {   
+            echo "Cadastro realizado com sucesso";
         }
         else
         {
@@ -43,5 +43,4 @@ class UsuarioDAO
     }
 
 }
-
 ?>

@@ -40,26 +40,14 @@ if($user['funcionarioOrContratante'] == 'F')
             </header>
 
             <div class='loginBox'>
-
+            <div class = 'perfilFuncBox'>
                 <section class='section'>
 
                     <div class='container grid'>
 
                         <form action = 'alterarFuncionario.php' method = 'POST'>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <h2>Perfil</h2>
+
+                            <h1>Perfil</h1>
 
                             <div class = 'userBox'>
                                 <label for = 'cpf'>CPF:</label>
@@ -117,6 +105,7 @@ if($user['funcionarioOrContratante'] == 'F')
                                 <br>
                                 <button class='button' type='submit'>Alterar Dados</button>
                                 <br>
+                                <br>
                                 <a href = '../../Front-end/views/excluirUsuario.html' class = 'button' type = 'button'>Excluir Conta</a>
                             </div>
 
@@ -131,7 +120,7 @@ if($user['funcionarioOrContratante'] == 'F')
                     </div>
 
                 </section>
-
+            </div>
             </div>
 
         </body>
@@ -160,26 +149,14 @@ else
             </header>
 
             <div class='loginBox'>
-
+            <div class = 'perfilBox'>
                 <section class='section'>
 
                     <div class='container grid'>
 
                         <form action = 'alterarContratante.php' method = 'POST'>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <h2>Perfil</h2>
+                        
+                            <h1>Perfil</h1>
 
                             <div class = 'userBox'>
                                 <label for = 'cpf'>CPF:</label>
@@ -264,6 +241,7 @@ else
                                 <br>
                                 <button class = 'button' type = 'submit'>Alterar Dados</button>
                                 <br>
+                                <br>
                                 <a href = '../../Front-end/views/excluirUsuario.html' class = 'button' type = 'button'>Excluir Conta</a>
                             </div>
 
@@ -277,7 +255,7 @@ else
                     </div>
 
                 </section>
-
+            </div>
             </div>
 
         </body>
