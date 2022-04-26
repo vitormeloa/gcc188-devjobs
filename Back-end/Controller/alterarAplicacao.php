@@ -11,6 +11,9 @@ $cpfFuncionario = $_POST['cpfFuncionario'];
 $cpfContratante = $_POST['cpfContratante'];
 $aplicacaoNome = $_POST['aplicacaoNome'];
 
+//Pra quando o Contratante for alterar a situacao da aplicacao, ou seja, aceitar ou recusar.
+$situacao = $_POST['situacao'];
+
 $connection = new Connection();
 $connection = $connection->getConnection();
 
@@ -25,9 +28,24 @@ if($aplicacaoDAO->alterarAplicacao($aplicacao, $connection))
 }
 else
 {
-    echo "Erro na alteração dos dados!" . $connection->error();
+    echo "Erro na alteração dos dados!";
     header("Location: ../../Front-end/views/aplicacoesFuncionario.html");
 }
 
+//Atualizando a situacao da aplicacao feita por um funcionario
+if($situacao == "ACEITO" || $situacao == "RECUSADO")
+{
+    $aplicacao->setSituacao($situacao);
+    if($aplicacaoDAO->alterarAplicacao($aplicacao, $connection))
+    {
+        echo "Aplicacao alterada com sucesso!";
+        header("Location: ../Controller/consultarTodasAplicacoesContratante.php");
+    }
+    else
+    {
+        echo "Erro na alteração dos dados!";
+        header("Location: ../consultarTodasAplicacoesContratante.php");
+    }
+}
 
 ?>

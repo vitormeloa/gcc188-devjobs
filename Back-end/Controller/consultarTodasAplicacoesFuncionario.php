@@ -75,7 +75,11 @@ if($todasAplicacoes->num_rows > 0)
 }
 else
 {
-    echo "Nenhuma Aplicação Cadastrada :/";
+    echo "Nenhuma Aplicação Cadastrada :/
+    <div class = 'userBox'>
+        <br>
+        <a href = '../../Front-end/views/aplicacoesFuncionario.html' class = 'button' type = 'button'>Voltar</a>
+    </div>";
 }
 
 ?>

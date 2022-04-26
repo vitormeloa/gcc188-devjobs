@@ -104,7 +104,7 @@ echo "<!DOCTYPE html>
 
                             <div class = 'userBox'>
                                 <br>
-                                <a href = '../../Front-end/views/mostrarPerfil.html' class = 'button' type = 'submit'>Voltar</a>
+                                <a href = 'consultarUsuario.php' class = 'button' type = 'submit'>Voltar</a>
                             </div>
 
                         </form>

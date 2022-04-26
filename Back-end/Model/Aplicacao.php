@@ -73,7 +73,6 @@ class Aplicacao
     public function setSituacao($situacao)
     {
         $this->situacao = $situacao;
-        return $this;
     }
 
 }
