@@ -10,12 +10,12 @@ class FuncionarioDAO
 
         if($connection->query($inserirFuncionario) == TRUE)
         {
-            echo "Funcionário inserido com sucesso! Faça o Login!";
+            echo "Cadastro realizado com sucesso!";
             header("Location: ../../index.html");
         }
         else
         {
-            //echo "Erro no cadastramento: " . $connection->error;
+            echo "Erro no cadastramento: " . $connection->error;
             header("Location: ../../Front-end/cadastrarFuncionario.html");
         }
     }

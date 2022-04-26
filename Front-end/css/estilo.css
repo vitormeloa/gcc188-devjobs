@@ -51,13 +51,10 @@ html {
 body {
     font: 400 1rem 'DM Sans', sans-serif;
     color: var(--text-color);
-    background-color: var(--body-color);
+    background-color: var(--base-color);
     -webkit-font-smoothing: antialiased;
     margin: 0;
     padding: 0;
-    background-image: url(../images/image-background-green.jpeg);
-    background-repeat:repeat;
-    background-size:cover;
 }
 
 .title {
@@ -199,11 +196,19 @@ body {
 }
 
 .loginBox .curriculoBox {
-    margin-top: 320%;
+    margin-top: 300%;
 }
 
 .loginBox .jobBox {
-    margin-top: 220%;
+    margin-top: 200%;
+}
+
+.loginBox .perfilBox {
+    margin-top: 200%;
+}
+
+.loginBox .perfilFuncBox {
+    margin-top: 100%;
 }
 
 .loginBox h2 {
@@ -277,7 +282,8 @@ body {
     color: white;
 }
 .card-job{
-    background-color: #444;
+
+    background-color: var(--base-color);
     box-shadow: 0 15px 25px rgba(0,0,0,.6);
     padding: 0;
 
