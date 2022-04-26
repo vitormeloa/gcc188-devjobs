@@ -195,7 +195,6 @@ body {
     border-radius: 10px;
 }
 
-
 .loginBox .curriculoBox {
     margin-top: 300%;
 }
@@ -283,6 +282,7 @@ body {
     color: white;
 }
 .card-job{
+
     background-color: var(--base-color);
     box-shadow: 0 15px 25px rgba(0,0,0,.6);
     padding: 0;

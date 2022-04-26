@@ -1,10 +1,13 @@
 <?php
 
+session_start();
+
 include_once '../Persistence/Connection.php';
 include_once '../Model/Job.php';
 include_once '../Persistence/JobDAO.php';
 
 $jobNome = $_POST['jobNome'];
+$_SESSION['jobNome'] = $jobNome;
 $qtdVagas = $_POST['qtdVagas'];
 $descricao = $_POST['descricao'];
 $requisitos = $_POST['requisitos'];

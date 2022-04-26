@@ -31,107 +31,109 @@ echo "<!DOCTYPE html>
 
             <div class='loginBox'>
 
-                <section class='section'>
+                <div class = 'perfilBox'>
 
-                    <div class='container grid'>
+                    <section class='section'>
 
-                        <form action = 'alterarContratanteDefinitivo.php' method = 'POST'>
+                        <div class='container grid'>
 
-                            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                            <form action = 'alterarContratanteDefinitivo.php' method = 'POST'>
 
-                            <h1>Alterar Perfil</h1>
+                                <h1>Alterar Perfil</h1>
 
-                            <div class = 'userBox'>
-                                <label for = 'cpf'>CPF:</label>
-                                <br>
-                                <input type = 'text' name = 'cpf' value = '" . $cpf . "' pattern = '\d{3}\.?\d{3}\.?\d{3}-?\d{2}' hidden>
-                                <input type = 'text' name = 'cpf' value = '" . $cpf . "' pattern = '\d{3}\.?\d{3}\.?\d{3}-?\d{2}' disabled>
-                                <br>
-                            </div>
+                                <div class = 'userBox'>
+                                    <label for = 'cpf'>CPF:</label>
+                                    <br>
+                                    <input type = 'text' name = 'cpf' value = '" . $cpf . "' pattern = '\d{3}\.?\d{3}\.?\d{3}-?\d{2}' hidden>
+                                    <input type = 'text' name = 'cpf' value = '" . $cpf . "' pattern = '\d{3}\.?\d{3}\.?\d{3}-?\d{2}' disabled>
+                                    <br>
+                                </div>
 
-                            <div class = 'userBox'>
-                                <label for = 'nome'>Nome Completo:</label>
-                                <br>
-                                <input type = 'text' name = 'nome' value = '" . $nome . "'>
-                                <br>
-                            </div>
+                                <div class = 'userBox'>
+                                    <label for = 'nome'>Nome Completo:</label>
+                                    <br>
+                                    <input type = 'text' name = 'nome' value = '" . $nome . "'>
+                                    <br>
+                                </div>
 
-                            <div class = 'userBox'>
-                                <br>
-                                <label for = 'email'>Email:</label>
-                                <br>
-                                <input type = 'email' name = 'email' value = '" . $email . "'>
-                                <br>
-                            </div>
+                                <div class = 'userBox'>
+                                    <br>
+                                    <label for = 'email'>Email:</label>
+                                    <br>
+                                    <input type = 'email' name = 'email' value = '" . $email . "'>
+                                    <br>
+                                </div>
 
-                            <div class = 'userBox'>
-                                <br>
-                                <label for = 'senha'>Senha:</label>
-                                <br>
-                                <input type = 'password' name = 'senha' value = '" . $senha . "'>
-                                <br>
-                            </div>
-                            
-                            <div class = 'userBox'>
-                                <br>
-                                <label for = 'telefone'>Telefone:</label>
-                                <br>
-                                <input type='phone' name = 'telefone' value = '" . $telefone . "'>
-                                <br>
-                            </div>
+                                <div class = 'userBox'>
+                                    <br>
+                                    <label for = 'senha'>Senha:</label>
+                                    <br>
+                                    <input type = 'password' name = 'senha' value = '" . $senha . "'>
+                                    <br>
+                                </div>
+                                
+                                <div class = 'userBox'>
+                                    <br>
+                                    <label for = 'telefone'>Telefone:</label>
+                                    <br>
+                                    <input type='phone' name = 'telefone' value = '" . $telefone . "'>
+                                    <br>
+                                </div>
 
-                            <div class = 'userBox'>
-                                <br>
-                                <label for = 'dataNasc'>Data de Nascimento:</label>
-                                <br>
-                                <input type = 'date' name = 'dataNasc' value = '" . $dataNasc . "' hidden>
-                                <input type = 'date' name = 'dataNasc' value = '" . $dataNasc . "' disabled>
-                                <br>
-                            </div>
+                                <div class = 'userBox'>
+                                    <br>
+                                    <label for = 'dataNasc'>Data de Nascimento:</label>
+                                    <br>
+                                    <input type = 'date' name = 'dataNasc' value = '" . $dataNasc . "' hidden>
+                                    <input type = 'date' name = 'dataNasc' value = '" . $dataNasc . "' disabled>
+                                    <br>
+                                </div>
 
-                            <div class = 'userBox'>
-                                <br>
-                                <label for = 'nomeEmpresa'>Nome Empresa:</label>
-                                <br>
-                                <input type = 'text' name = 'nomeEmpresa' value = '" . $nomeEmpresa . "'>
-                                <br>
-                            </div>
+                                <div class = 'userBox'>
+                                    <br>
+                                    <label for = 'nomeEmpresa'>Nome Empresa:</label>
+                                    <br>
+                                    <input type = 'text' name = 'nomeEmpresa' value = '" . $nomeEmpresa . "'>
+                                    <br>
+                                </div>
 
-                            <div class = 'userBox'>
-                                <br>
-                                <label for = 'cnpj'>CNPJ:</label>
-                                <br>
-                                <input type = 'text' name = 'cnpj' value = '" . $cnpj . "' hidden>
-                                <input type = 'text' name = 'cnpj' value = '" . $cnpj . "' disabled>
-                                <br>
-                            </div>
+                                <div class = 'userBox'>
+                                    <br>
+                                    <label for = 'cnpj'>CNPJ:</label>
+                                    <br>
+                                    <input type = 'text' name = 'cnpj' value = '" . $cnpj . "' hidden>
+                                    <input type = 'text' name = 'cnpj' value = '" . $cnpj . "' disabled>
+                                    <br>
+                                </div>
 
-                            <div class = 'userBox'>
-                                <br>
-                                <label for = 'dataAberturaEmpresa'>Data de Abertura da Empresa:</label>
-                                <br>
-                                <input type = 'date' name = 'dataAberturaEmpresa' value = '" . $dataAberturaEmpresa . "' hidden>
-                                <input type = 'date' name = 'dataAberturaEmpresa' value = '" . $dataAberturaEmpresa . "' disabled>
-                                <br>
-                            </div>
+                                <div class = 'userBox'>
+                                    <br>
+                                    <label for = 'dataAberturaEmpresa'>Data de Abertura da Empresa:</label>
+                                    <br>
+                                    <input type = 'date' name = 'dataAberturaEmpresa' value = '" . $dataAberturaEmpresa . "' hidden>
+                                    <input type = 'date' name = 'dataAberturaEmpresa' value = '" . $dataAberturaEmpresa . "' disabled>
+                                    <br>
+                                </div>
 
-                            <div class = 'userBox'>
-                                <br>
-                                <button class='button' type='submit'>Alterar Dados</button>
-                                <br>
-                            </div>
+                                <div class = 'userBox'>
+                                    <br>
+                                    <button class='button' type='submit'>Alterar</button>
+                                    <br>
+                                </div>
 
-                            <div class = 'userBox'>
-                                <br>
-                                <a href = 'consultarUsuario.php' class = 'button' type = 'button'>Voltar</a>
-                            </div>
+                                <div class = 'userBox'>
+                                    <br>
+                                    <a href = '../../Front-end/views/mostrarPerfil.html' class = 'button' type = 'submit'>Voltar</a>
+                                </div>
 
-                        </form>
+                            </form>
 
-                    </div>
+                        </div>
 
-                </section>
+                    </section>
 
+                </div>
+                
             </div>
 
         </body>

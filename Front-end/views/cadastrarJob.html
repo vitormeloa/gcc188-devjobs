@@ -28,17 +28,10 @@
 
                         <div class = "container grid">
 
-                            <form action = "../../Back-end/Controller/cadastrarCurriculo.php" method = "POST" autocomplete="off">
+                            <form action = "../../Back-end/Controller/cadastrarJob.php" method = "POST" autocomplete="off">
 
                                 <h1>Cadastro Job</h1>
                                 <br>
-                                <div class = "userBox">
-                                    <label for = "jobNome">Nome do Job:</label>
-                                    <br>
-                                    <br>
-                                    <input type = "text" name = "jobNome" maxlength = "50" oninvalid = "this.setCustomValidity('O nome deve ter no máximo 50 caracteres!')" oninput = "this.setCustomValidity('')" required>
-                                    <br>
-                                </div>
 
                                 <div class = "userBox">
                                     <label for = "qtdVagas">Quantidade de vagas:</label>
@@ -52,7 +45,7 @@
                                     <br>
                                     <label for = "descricao">Descrição:</label>
                                     <br>
-                                    <textarea name="descricao"  cols = "32" rows="8" maxlength="300" required></textarea>
+                                    <textarea name="descricao" placeholder = "Pequena descrição da vaga"cols = "32" rows="8" maxlength="300" required></textarea>
                                     <br>
                                 </div>
 
@@ -60,7 +53,7 @@
                                     <br>
                                     <label for = "requisitos">Requisitos:</label>
                                     <br>
-                                    <textarea name="requisitos"  cols = "32" rows="8" maxlength="200" required></textarea>
+                                    <textarea name="requisitos" placeholder = "Pequena descrição dos requisitos da vaga" cols = "32" rows="8" maxlength="200" required></textarea>
                                     <br>
                                 </div>
                             
@@ -68,14 +61,25 @@
                                     <br>
                                     <label for = "beneficios">Benefícios:</label>
                                     <br>
-                                    <textarea name="beneficios"  cols = "32" rows="8" maxlength="200" required></textarea>
+                                    <textarea name = "beneficios" placeholder = "Pequena descrição dos benefícios da vaga" cols = "32" rows="8" maxlength = "200" required></textarea>
                                     <br>
-                                </div>
-
-                                <div class = "userBox">
-                                    <div class = "">
+                                    <div class = "userBox">
+                                        <label for = "jobNome">Nome do Job:</label>
                                         <br>
-                                        <label for = "remoto">Remoto:</label>
+                                        <br>
+                                        <input type = "text" name = "jobNome" maxlength = "50" oninvalid = "this.setCustomValidity('O nome deve ter no máximo 50 caracteres!')" oninput = "this.setCustomValidity('')" required>
+                                        <br>
+                                    </div>
+
+                                    <div class = "userBox">
+                                        <label for = "qtdVagas">Quantidade de vagas:</label>
+                                        <br>
+                                        <br>
+                                        <input type = "number" name = "qtdVagas" step = "1" min = "1" oninvalid = "this.setCustomValidity('A quantidade de vagas deve ser um número inteiro!')" oninput = "this.setCustomValidity('')" required>
+                                        <br>
+                                    </div>
+
+                                    <div class = "userBox">
                                         <br>
                                         <select name="remoto" id = "remoto">
                                             <option selected disable value = ""></option>
@@ -84,49 +88,53 @@
                                             <option>Híbrido</option>
                                         </select>
                                         <br>
-                                        <br>
                                     </div>
-                                </div>
 
                                 <div class="userBox">
                                     <br>
                                     <label for="salario">Salário:</label>
                                     <br>
-                                    <input type="number" name="salario" oninvalid = "this.setCustomValidity('Deve ser um numero em ponto flutuante com duas casas após a vírgula!')" oninput = "this.setCustomValidity('')">
+                                    <input type = "number" name = "salario" oninvalid = "this.setCustomValidity('Deve ser um numero em ponto flutuante com duas casas após a vírgula!')" oninput = "this.setCustomValidity('')">
                                     <br>
                                 </div>
 
                                 <div class="userBox">
                                     <br>
-                                    <label for="cpfContratante">CPF do Contratante:</label>
+                                    <label for = "cpfContratante">Informe Seu CPF:</label>
                                     <br>
-                                    <input type="text" name="cpfContratante" pattern = "\d{3}\.?\d{3}\.?\d{3}-?\d{2}" oninvalid = "this.setCustomValidity('O CPF deve ser válido!')" oninput = "this.setCustomValidity('')">
+                                    <input type = "text" name = "cpfContratante" pattern = "\d{3}\.?\d{3}\.?\d{3}-?\d{2}" oninvalid = "this.setCustomValidity('O CPF deve ser válido!')" oninput = "this.setCustomValidity('')">
                                     <br>
                                 </div>
 
                                 <div class = "userBox">
+                                    <label for = "jobNome">Nome do Job:</label>
                                     <br>
-                                    <button class = "button" type = "submit">Cadastrar</button>
+                                    <br>
+                                    <input type = "text" name = "jobNome" placeholder = "Dê um nome único :D" maxlength = "50" oninvalid = "this.setCustomValidity('O nome deve ter no máximo 50 caracteres!')" oninput = "this.setCustomValidity('')" required>
+                                    <br>
                                 </div>
 
-                                <div class = "userBox">
-                                    <br>
-                                    <button class = "button" type = "reset">Resetar Campos</button>
-                                </div>
+                                    <div class = "userBox">
+                                        <br>
+                                        <button class = "button" type = "submit">Cadastrar</button>
+                                    </div>
 
-                                <div class = "userBox">
-                                    <br>
-                                    <a href = "curriculosFuncionario.html" class = "button" type = "button">Voltar</a>
-                                </div>
+                                    <div class = "userBox">
+                                        <br>
+                                        <button class = "button" type = "reset">Resetar Campos</button>
+                                    </div>
 
-                            </form>
+                                    <div class = "userBox">
+                                        <br>
+                                        <a href = "curriculosFuncionario.html" class = "button" type = "button">Voltar</a>
+                                    </div>
 
-                        </div>
+                                </form>
 
                     </section>
                     
                 </div>
-                
+
             </div>
 
         </main>

@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 include_once '../Persistence/Connection.php';
 include_once '../Model/Curriculo.php';
 include_once '../Persistence/CurriculoDAO.php';
@@ -12,7 +14,7 @@ $objetivo = $_POST['objetivo'];
 $formacaoAcademica = $_POST['formacaoAcademica'];
 $expProfissionaisRelevantes = $_POST['expProfissionaisRelevantes'];
 $especialidade = $_POST['especialidade'];
-$cpf = $_POST['cpf'];
+$cpf = $_SESSION['cpf'];
 $curriculoNome = $_POST['curriculoNome'];
 
 $connection = new Connection();

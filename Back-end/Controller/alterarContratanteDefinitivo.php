@@ -29,13 +29,13 @@ if($usuarioDAO->alterarUsuario($contratante, $connection))
     if($contratanteDAO->alterarContratante($contratante, $connection))
     {
         echo "Contratante alterado com sucesso!";
-        header("Location: ../../Front-end/views/mostrarPerfil.html");
+        header("Location: consultarUsuario.php");
     }
 }
 else
 {
     echo "Erro na alteração dos dados!" . $connection->error();
-    header("Location: ../../Front-end/views/mostrarPerfil.html");
+    header("Location: consultarUsuario.php");
 }
 
 

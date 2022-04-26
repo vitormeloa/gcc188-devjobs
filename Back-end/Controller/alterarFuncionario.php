@@ -16,7 +16,7 @@ echo "<!DOCTYPE html>
             <meta http-equiv='X-UA-Compatible' content='IE=edge'>
             <meta name='viewport' content='width=device-width, initial-scale=1.0'>
             <title>Perfil|DevJobs</title>
-            <link rel='stylesheet' href='../../css/estilo.css'>
+            <link rel='stylesheet' href='../../Front-end/css/estilo.css'>
         </head>
 
         <body>
@@ -98,8 +98,13 @@ echo "<!DOCTYPE html>
 
                             <div class = 'userBox'>
                                 <br>
-                                <button class='button' type='submit'>Alterar Dados</button>
+                                <button class='button' type='submit'>Alterar</button>
                                 <br>
+                            </div>
+
+                            <div class = 'userBox'>
+                                <br>
+                                <a href = '../../Front-end/views/mostrarPerfil.html' class = 'button' type = 'submit'>Voltar</a>
                             </div>
 
                         </form>

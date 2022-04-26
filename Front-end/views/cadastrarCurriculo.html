@@ -23,118 +23,107 @@
             <div class = "loginBox">
 
                 <div class="curriculoBox">
-                    
-                    <section class = "section">
+                <section class = "section">
 
-                        <div class = "container grid">
+                    <div class = "container grid">
 
-                            <form action = "../../Back-end/Controller/cadastrarCurriculo.php" method = "POST" autocomplete="off">
+                        <form action = "../../Back-end/Controller/cadastrarCurriculo.php" method = "POST" autocomplete="off">
 
-                                <h1>Cadastro Currículo</h1>
-                                <br>
-                                
-                                <div class = "userBox">
-                                    <label for = "cidadeOrigem">*Cidade de Origem:</label>
-                                    <br>
-                                    <input type = "text" name = "cidadeOrigem" maxlength = "50" oninvalid = "this.setCustomValidity('A cidade de origem deve ter no máximo 50 caracteres!')" oninput = "this.setCustomValidity('')" required>
-                                    <br>
-                                </div>
-
-                                <div class = "userBox">
-                                    <label for = "estadoOrigem">*Estado de Origem:</label>
-                                    <br>
-                                    <input type = "text" name = "estadoOrigem" placeholder = "Entre apenas com a sigla. Ex: MG" oninvalid = "this.setCustomValidity('Apenas a sigla o estado será válida!')" oninput = "this.setCustomValidity('')" required>
-                                    <br>
-                                </div>
-
-                                <div class = "userBox">
-                                    <br>
-                                    <label for = "github">*Github:</label>
-                                    <br>
-                                    <input type = "url" name = "github" oninvalid = "this.setCustomValidity('O GitHub deve ser válido!')" oninput = "this.setCustomValidity('')" required>
-                                    <br>
-                                </div>
-
-                                <div class = "userBox">
-                                    <br>
-                                    <label for = "linkedIn">*LinkedIn:</label>
-                                    <br>
-                                    <input type = "url" name = "linkedIn" oninvalid = "this.setCustomValidity('O LinkedIn deve ser válido!')" oninput = "this.setCustomValidity('')" required>
-                                    <br>
-                                </div>
+                            <h1>Cadastro Currículo</h1>
+                            <br>
                             
-                                <div class = "userBox">
-                                    <br>
-                                    <label for = "objetivo">*Objetivo:</label>
-                                    <br>
-                                    <textarea name="objetivo"  cols = "32" rows="8" maxlength="200" required></textarea>
-                                    <br>
-                                </div>
+                            <div class = "userBox">
+                                <label for = "cidadeOrigem">*Cidade de Origem:</label>
+                                <br>
+                                <input type = "text" name = "cidadeOrigem" maxlength = "50" oninvalid = "this.setCustomValidity('A cidade de origem deve ter no máximo 50 caracteres!')" oninput = "this.setCustomValidity('')" required>
+                                <br>
+                            </div>
 
-                                <div class = "userBox">
-                                    <br>
-                                    <label for = "formacaoAcademica">*Formação Acadêmica:</label>
-                                    <br>
-                                    <textarea name="formacaoAcademica"  cols = "32" rows="8" maxlength="150" required></textarea>
-                                    <br>
-                                </div>
+                            <div class = "userBox">
+                                <label for = "estadoOrigem">*Estado de Origem:</label>
+                                <br>
+                                <input type = "text" name = "estadoOrigem" placeholder = "Entre apenas com a sigla. Ex: MG" oninvalid = "this.setCustomValidity('Apenas a sigla o estado será válida!')" oninput = "this.setCustomValidity('')" required>
+                                <br>
+                            </div>
 
-                                <div class = "userBox">
-                                    <br>
-                                    <label for = "expProfissionaisRelevantes">Experiências profissionais relevantes:</label>
-                                    <br>
-                                    <br>
-                                    <textarea name="expProfissionaisRelevantes"  cols = "32" rows="8" maxlength="300" required></textarea>
-                                    <br>
-                                </div>
+                            <div class = "userBox">
+                                <br>
+                                <label for = "github">*Github:</label>
+                                <br>
+                                <input type = "url" name = "github" placeholder = "Entre com o link do seu perfil" oninvalid = "this.setCustomValidity('O GitHub deve ser válido!')" oninput = "this.setCustomValidity('')" required>
+                                <br>
+                            </div>
 
-                                <div class = "userBox">
-                                    <br>
-                                    <label for = "especialidade">Especialidade:</label>
-                                    <br>
-                                    <textarea name="especialidade"  cols = "32" rows="8" maxlength="30" required></textarea>
-                                    <br>
-                                </div>
+                            <div class = "userBox">
+                                <br>
+                                <label for = "linkedIn">LinkedIn:</label>
+                                <br>
+                                <input type = "url" name = "linkedIn" placeholder = "Entre com o link do seu perfil" oninvalid = "this.setCustomValidity('O LinkedIn deve ser válido!')" oninput = "this.setCustomValidity('')" required>
+                                <br>
+                            </div>
+                        
+                            <div class = "userBox">
+                                <br>
+                                <label for = "objetivo">*Objetivo:</label>
+                                <br>
+                                <textarea name="objetivo"  cols = "32" rows="8" maxlength="200" required></textarea>
+                                <br>
+                            </div>
 
-                                <div class = "userBox">
-                                    <br>
-                                    <label for = "cpf">*Informe seu CPF:</label>
-                                    <br>
-                                    <input type = "text" name = "cpf" oninvalid = "this.setCustomValidity('O CPF deve ser válido!')" oninput = "this.setCustomValidity('')" required>
-                                    <br>
-                                </div>
+                            <div class = "userBox">
+                                <br>
+                                <label for = "formacaoAcademica">*Formação Acadêmica:</label>
+                                <br>
+                                <textarea name="formacaoAcademica"  cols = "32" rows="8" maxlength="150" required></textarea>
+                                <br>
+                            </div>
 
-                                <div class = "userBox">
-                                    <br>
-                                    <label for = "curriculoNome">*Nome do Currículo:</label>
-                                    <br>
-                                    <input type = "text" name = "curriculoNome" maxlength = "50" placeholder = "Dê um nome único :D" oninvalid = "this.setCustomValidity('O nome deve ter no máximo 50 caracteres!')" oninput = "this.setCustomValidity('')" required>
-                                    <br>
-                                </div>
+                            <div class = "userBox">
+                                <br>
+                                <label for = "expProfissionaisRelevantes">Experiências profissionais relevantes:</label>
+                                <br>
+                                <br>
+                                <textarea name="expProfissionaisRelevantes"  cols = "32" rows="8" maxlength="300" required></textarea>
+                                <br>
+                            </div>
 
-                                <div class = "userBox">
-                                    <br>
-                                    <button class = "button" type = "submit">Cadastrar</button>
-                                </div>
+                            <div class = "userBox">
+                                <br>
+                                <label for = "especialidade">Especialidade:</label>
+                                <br>
+                                <textarea name="especialidade"  cols = "32" rows="8" maxlength="30" required></textarea>
+                                <br>
+                            </div>
+                            
+                            <div class = "userBox">
+                                <br>
+                                <label for = "curriculoNome">*Nome do Currículo:</label>
+                                <br>
+                                <input type = "text" name = "curriculoNome" maxlength = "50" placeholder = "Dê um nome único :D" oninvalid = "this.setCustomValidity('O nome deve ter no máximo 50 caracteres!')" oninput = "this.setCustomValidity('')" required>
+                                <br>
+                            </div>
 
-                                <div class = "userBox">
-                                    <br>
-                                    <button class = "button" type = "reset">Resetar Campos</button>
-                                </div>
+                            <div class = "userBox">
+                                <br>
+                                <button class = "button" type = "submit">Cadastrar</button>
+                            </div>
 
-                                <div class = "userBox">
-                                    <br>
-                                    <a href = "curriculosFuncionario.html" class = "button" type = "button">Voltar</a>
-                                </div>
+                            <div class = "userBox">
+                                <br>
+                                <button class = "button" type = "reset">Resetar Campos</button>
+                            </div>
 
-                            </form>
+                            <div class = "userBox">
+                                <br>
+                                <a href = "curriculosFuncionario.html" class = "button" type = "button">Voltar</a>
+                            </div>
 
-                        </div>
+                        </form>
 
-                    </section>
+                    </div>
 
-                </div>
-
+                </section>
+            </div>
             </div>
 
         </main>

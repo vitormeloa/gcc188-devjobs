@@ -15,7 +15,7 @@ class FuncionarioDAO
         }
         else
         {
-            echo "Erro no cadastramento: " . $connection->error;
+            //echo "Erro no cadastramento: " . $connection->error;
             header("Location: ../../Front-end/cadastrarFuncionario.html");
         }
     }

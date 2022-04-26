@@ -1,11 +1,13 @@
 <?php
 
+session_start();
+
 include_once '../Persistence/Connection.php';
 include_once '../Model/Usuario.php';
 include_once '../Persistence/UsuarioDAO.php';
 include_once '../Persistence/ContratanteDAO.php';
 
-$cpf = $_POST['cpf'];
+$cpf = $_SESSION['cpf'];
 
 $connection = new Connection();
 $connection = $connection->getConnection();
@@ -103,7 +105,7 @@ if($user['funcionarioOrContratante'] == 'F')
 
                             <div class = 'userBox'>
                                 <br>
-                                <button class='button' type='submit'>Alterar Dados</button>
+                                <button class='button' type='submit'>Alterar Perfil</button>
                                 <br>
                                 <br>
                                 <a href = '../../Front-end/views/excluirUsuario.html' class = 'button' type = 'button'>Excluir Conta</a>
@@ -239,7 +241,7 @@ else
 
                             <div class = 'userBox'>
                                 <br>
-                                <button class = 'button' type = 'submit'>Alterar Dados</button>
+                                <button class = 'button' type = 'submit'>Alterar Perfil</button>
                                 <br>
                                 <br>
                                 <a href = '../../Front-end/views/excluirUsuario.html' class = 'button' type = 'button'>Excluir Conta</a>

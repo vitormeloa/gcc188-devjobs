@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 
 <html lang="pt-BR">
@@ -6,7 +10,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Página</title>
+        <title>Contratante</title>
         <link rel="stylesheet" href="../css/estilo.css">
     </head>
 
@@ -21,27 +25,27 @@
                 
             </header>
 
-                <div class="loginBox">
+                <div class = "loginBox">
 
-                    <section class="section">
+                    <section class = "section">
 
-                        <div class="container grid">
+                        <div class = "container grid">
 
                             <form>
                                 
-                                <div class="buttons">
+                                <div class = "buttons">
                                     <h1>Home|DevJobs</h1> 
-                                    <a href="mostrarPerfil.html" class="button" type="button">Perfil</a>
+                                    <a href = "../../Back-end/Controller/consultarUsuario.php" class = "button" type = "button">Perfil</a>
                                     <!--Botao de Contratante-->
                                     <br>
                                     <br>
-                                    <a href="jobsContratante.html" class="button" type="button">Jobs</a>
+                                    <a href = "jobsContratante.html" class = "button" type = "button">Jobs</a>
                                     <br>
                                     <br>
-                                    <a href="solicitacoesRecebidasContratante.html" class="button" type="button">Solicitações Recebidas</a>
+                                    <a href = "../../Back-end/Controller/consultarTodasAplicacoesContratante.php" class = "button" type = "button">Solicitações Recebidas</a>
                                     <br>
                                     <br>
-                                    <a href="../../index.html" class="button" type="button">Sair</a>
+                                    <a href = "../../index.html" class = "button" type = "button">Sair</a>
                                 </div>
 
                             </form>
